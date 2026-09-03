@@ -1,0 +1,378 @@
+<title>Prime Smart SEO Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#F7F5F0; --surface:#FFFFFF; --surface-2:#F1EEE7;
+    --ink:#13303A; --ink-soft:#4A5b62; --ink-faint:#7d8a8e; --line:#E4DFD5; --line-2:#D8D2C5;
+    --brand:#0E3B43; --brand-2:#155B63;
+    --grow:#1F9D6B; --grow-bg:#E3F1EA; --grow-ink:#136B49;
+    --amber:#C9843E; --amber-bg:#F6ECDD; --amber-ink:#8f5a1f;
+    --slate:#6C7A80; --slate-bg:#ECEEEC;
+    --down:#C4554D; --down-bg:#F6E4E2;
+    --shadow:0 1px 2px rgba(19,48,58,.05), 0 8px 26px rgba(19,48,58,.07);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --paper:#0F1A1D; --surface:#16252A; --surface-2:#1D2E33;
+    --ink:#EAF1EF; --ink-soft:#AFBEC0; --ink-faint:#7E9296; --line:#243940; --line-2:#2E464D;
+    --brand:#3FB6A6; --brand-2:#5AC9B7;
+    --grow:#43C08A; --grow-bg:#132A22; --grow-ink:#8FE0BC;
+    --amber:#E0A85B; --amber-bg:#2A2113; --amber-ink:#EAC489;
+    --slate:#8FA0A5; --slate-bg:#1E2C30;
+    --down:#E0857C; --down-bg:#2C1A18;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.4);
+  }}
+  :root[data-theme="dark"]{
+    --paper:#0F1A1D; --surface:#16252A; --surface-2:#1D2E33;
+    --ink:#EAF1EF; --ink-soft:#AFBEC0; --ink-faint:#7E9296; --line:#243940; --line-2:#2E464D;
+    --brand:#3FB6A6; --brand-2:#5AC9B7;
+    --grow:#43C08A; --grow-bg:#132A22; --grow-ink:#8FE0BC;
+    --amber:#E0A85B; --amber-bg:#2A2113; --amber-ink:#EAC489;
+    --slate:#8FA0A5; --slate-bg:#1E2C30;
+    --down:#E0857C; --down-bg:#2C1A18;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);
+    font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px 80px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  h1,h2,h3,.num{font-family:"Archivo",-apple-system,sans-serif}
+  .tnum{font-variant-numeric:tabular-nums}
+
+  header.cover{
+    background:linear-gradient(135deg,var(--brand) 0%, #0A2A30 100%);
+    color:#EAF6F3;border-radius:18px;padding:34px 34px 30px;margin:26px 0 20px;
+    position:relative;overflow:hidden;box-shadow:var(--shadow);
+  }
+  header.cover .flagmark{position:absolute;right:-30px;top:-20px;opacity:.14;font-size:190px;line-height:1;transform:rotate(-8deg)}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#8FD9CC;margin-bottom:14px}
+  header.cover h1{font-size:clamp(1.7rem,4.4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;text-wrap:balance;max-width:19ch}
+  header.cover .sub{margin-top:12px;color:#B9DAD4;font-size:1rem;max-width:62ch}
+  .coverbar{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-size:.82rem;color:#CDE6E1;font-family:"IBM Plex Mono",monospace}
+  .coverbar b{color:#fff;font-weight:600}
+
+  section{margin-top:34px}
+  .sec-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grow);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .sec-eyebrow::before{content:"";width:22px;height:2px;background:var(--grow)}
+  h2{font-size:1.4rem;font-weight:750;letter-spacing:-.015em;margin-bottom:4px;text-wrap:balance}
+  .lead{color:var(--ink-soft);font-size:1rem;margin-bottom:18px;max-width:68ch}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .pad{padding:20px 22px}
+
+  .scores{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:720px){.scores{grid-template-columns:repeat(2,1fr)}}
+  .score{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px;box-shadow:var(--shadow);position:relative}
+  .score .k{font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .score .v{font-family:"Archivo";font-weight:800;font-size:2rem;line-height:1;margin-top:9px;letter-spacing:-.02em}
+  .score .from{font-size:.8rem;color:var(--ink-faint);margin-top:6px}
+  .score .from s{text-decoration:none;color:var(--ink-soft);font-weight:600}
+  .delta{display:inline-flex;align-items:center;gap:4px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:999px;margin-top:11px}
+  .delta.up{background:var(--grow-bg);color:var(--grow-ink)}
+  .delta.down{background:var(--down-bg);color:var(--down)}
+  .delta.flat{background:var(--slate-bg);color:var(--slate)}
+  .score.hero{background:linear-gradient(160deg,var(--grow-bg),var(--surface));border-color:color-mix(in srgb,var(--grow) 30%,transparent)}
+
+  .callout{margin-top:16px;background:var(--grow-bg);border:1px solid color-mix(in srgb,var(--grow) 26%,transparent);border-radius:12px;padding:14px 16px;font-size:.95rem;color:var(--grow-ink)}
+  .callout b{color:var(--grow-ink)}
+  .caveat{margin-top:16px;background:var(--surface);border:1px solid var(--line-2);border-left:4px solid var(--amber);border-radius:12px;padding:16px 18px}
+  .caveat h3{font-family:"IBM Plex Mono";font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:10px}
+  .caveat ul{list-style:none;display:grid;gap:8px}
+  .caveat li{font-size:.88rem;color:var(--ink-soft);padding-left:18px;position:relative}
+  .caveat li::before{content:"•";position:absolute;left:2px;color:var(--amber)}
+  .caveat li b{color:var(--ink)}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem}
+  th{text-align:left;padding:11px 14px;font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);background:var(--surface-2);border-bottom:1px solid var(--line)}
+  td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  td.kw{font-weight:600;color:var(--ink)}
+  td.p{font-variant-numeric:tabular-nums;text-align:center;white-space:nowrap;font-family:"IBM Plex Mono",monospace}
+  th.c{text-align:center}
+  .before{color:var(--ink-faint)}
+  .arrow{color:var(--ink-faint);padding:0 2px}
+  .now{color:var(--ink);font-weight:600}
+  .band{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.58rem;font-weight:600;letter-spacing:.05em;padding:3px 7px;border-radius:999px;white-space:nowrap}
+  .band.p1{background:var(--grow-bg);color:var(--grow-ink)}
+  .band.p2{background:var(--amber-bg);color:var(--amber-ink)}
+  .band.p3{background:var(--slate-bg);color:var(--slate)}
+  .mv{font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+  .mv.up{background:var(--grow-bg);color:var(--grow-ink)}
+  .mv.down{background:var(--down-bg);color:var(--down)}
+  .mv.new{background:#E7EEF7;color:#2a5fb0}
+  :root[data-theme="dark"] .mv.new,:root:not([data-theme="light"]) .mv.new{background:#182636;color:#9dc0ea}
+  .mv.flat{background:var(--slate-bg);color:var(--slate)}
+  tr.grp td{background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding:8px 14px;font-weight:600}
+
+  .loggrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.loggrid{grid-template-columns:1fr}}
+  .logcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+  .logcard h3{font-size:.7rem;font-family:"IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .tag{font-family:"IBM Plex Mono",monospace;font-size:.58rem;font-weight:600;padding:2px 7px;border-radius:5px}
+  .tag.tech{background:#E7EEF0;color:#2C5560} .tag.seo{background:#E7EEF7;color:#2a5fb0} .tag.geo{background:var(--grow-bg);color:var(--grow-ink)} .tag.aeo{background:var(--amber-bg);color:var(--amber-ink)}
+  :root[data-theme="dark"] .tag.tech,:root:not([data-theme="light"]) .tag.tech{background:#1E2E33;color:#8FC7CE}
+  :root[data-theme="dark"] .tag.seo,:root:not([data-theme="light"]) .tag.seo{background:#182636;color:#9dc0ea}
+  ul.done{list-style:none;display:grid;gap:9px}
+  ul.done li{position:relative;padding-left:24px;font-size:.9rem;color:var(--ink-soft)}
+  ul.done li::before{content:"✓";position:absolute;left:0;top:0;color:var(--grow);font-weight:800}
+  ul.done li b{color:var(--ink);font-weight:600}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.cols{grid-template-columns:1fr}}
+  .stat-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+  .stat-row:last-child{border-bottom:none}
+  .stat-row .l{color:var(--ink-soft);font-size:.9rem}
+  .stat-row .r{font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+  .note{font-size:.85rem;color:var(--ink-faint);margin-top:12px}
+  .gbp-badge{display:inline-flex;align-items:center;gap:8px;font-family:"Archivo";font-weight:800;font-size:1.4rem}
+  .stars{color:var(--amber)}
+
+  ul.next{list-style:none;display:grid;gap:10px}
+  ul.next li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:12px 15px;box-shadow:var(--shadow)}
+  ul.next li .step{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--grow);font-size:.8rem;flex:0 0 auto}
+  ul.next li b{color:var(--ink)}
+
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:.8rem;line-height:1.7}
+  footer b{color:var(--ink-soft)}
+
+  @media print{
+    :root{--paper:#fff}
+    body{background:#fff}
+    .wrap{max-width:none;padding:0 6mm}
+    header.cover,.card,.score,.logcard,.tablewrap,ul.next li{box-shadow:none}
+    section,.card,.logcard,.tablewrap,.caveat{break-inside:avoid}
+    header.cover .flagmark{opacity:.1}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="cover">
+    <div class="flagmark">🚩</div>
+    <p class="eyebrow">Monthly SEO Report · Month 1</p>
+    <h1>Prime Smart Flags — visibility nearly doubled this month</h1>
+    <p class="sub">A plain-English summary of the SEO, local and technical work done this month and the movement it produced in Google Search. Every figure below is pulled live from your own Search Console, with before and after shown side by side.</p>
+    <div class="coverbar">
+      <span>Client: <b>Prime Smart Flags, Dubai</b></span>
+      <span>Period: <b>Aug 2026</b> (28-day window)</span>
+      <span>Report date: <b>28 Aug 2026</b></span>
+    </div>
+  </header>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section>
+    <p class="sec-eyebrow">Executive summary</p>
+    <h2>The month in four numbers</h2>
+    <p class="lead">Comparing the last 28 days (30 July&ndash;26 August) with the previous 28 days (2&ndash;29 July). Percentages are large but the base numbers are still small and early, so the raw figures are shown next to each one.</p>
+
+    <div class="scores">
+      <div class="score hero">
+        <div class="k">Impressions</div>
+        <div class="v tnum">1,110</div>
+        <div class="from">from <s>601</s> last period</div>
+        <div class="delta up">▲ +85%</div>
+      </div>
+      <div class="score">
+        <div class="k">Clicks</div>
+        <div class="v tnum">22</div>
+        <div class="from">from <s>13</s> last period</div>
+        <div class="delta up">▲ +69%</div>
+      </div>
+      <div class="score">
+        <div class="k">Avg. position</div>
+        <div class="v tnum">26.6</div>
+        <div class="from">from <s>34.0</s> last period</div>
+        <div class="delta up">▲ page 3 → page 2</div>
+      </div>
+      <div class="score">
+        <div class="k">Avg. CTR</div>
+        <div class="v tnum">2.0%</div>
+        <div class="from">from <s>2.2%</s> last period</div>
+        <div class="delta flat">— −0.2 pt</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>What this means:</b> your site was seen <b>85% more often</b> in Google (601 → 1,110 times) and earned <b>more visits</b> (13 → 22), while your blended average ranking rose from position 34 to 26.6 — the shift from page 3 into page 2 territory. The small dip in click-rate is expected and healthy: when impressions grow faster than clicks, the percentage mechanically softens even though total clicks went up. It is not a drop in performance.
+    </div>
+  </section>
+
+  <!-- KEYWORD RANKINGS -->
+  <section>
+    <p class="sec-eyebrow">Keyword rankings · before &amp; after</p>
+    <h2>Where your keywords ranked, then and now</h2>
+    <p class="lead">Google now shows your site for <b>~90 search terms</b> (up from a handful). Below are the terms that matter, with their average position <b>before</b> (2&ndash;29 July) and <b>now</b> (30 July&ndash;26 August). Lower number = higher on the page. Most terms improved, a few slipped, and several started ranking for the first time.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Search term</th><th class="c">Band now</th><th class="c">Before</th><th class="c">Now</th><th class="c">Move</th></tr>
+        </thead>
+        <tbody>
+          <tr class="grp"><td colspan="5">▲ Moved up the rankings</td></tr>
+          <tr><td class="kw">conference flags</td><td class="c"><span class="band p2">Page 2</span></td><td class="p before">31.6</td><td class="p now">14.5</td><td class="c"><span class="mv up">▲ 17</span></td></tr>
+          <tr><td class="kw">l shaped flag</td><td class="c"><span class="band p2">Page 2</span></td><td class="p before">29.2</td><td class="p now">14.3</td><td class="c"><span class="mv up">▲ 15</span></td></tr>
+          <tr><td class="kw">l shape flags</td><td class="c"><span class="band p3">Page 3</span></td><td class="p before">39.9</td><td class="p now">27.7</td><td class="c"><span class="mv up">▲ 12</span></td></tr>
+          <tr><td class="kw">l shape flag</td><td class="c"><span class="band p2">Page 2</span></td><td class="p before">22.2</td><td class="p now">11.1</td><td class="c"><span class="mv up">▲ 11</span></td></tr>
+          <tr><td class="kw">telescopic flag pole supplier uae</td><td class="c"><span class="band p3">Page 7</span></td><td class="p before">72.0</td><td class="p now">61.8</td><td class="c"><span class="mv up">▲ 10</span></td></tr>
+          <tr><td class="kw">outdoor flags</td><td class="c"><span class="band p3">Page 3</span></td><td class="p before">29.0</td><td class="p now">24.0</td><td class="c"><span class="mv up">▲ 5</span></td></tr>
+          <tr><td class="kw">telescopic flag pole dubai</td><td class="c"><span class="band p3">Page 6</span></td><td class="p before">59.4</td><td class="p now">54.3</td><td class="c"><span class="mv up">▲ 5</span></td></tr>
+          <tr><td class="kw">l shape flag pole</td><td class="c"><span class="band p1">Page 1</span></td><td class="p before">8.0</td><td class="p now">4.8</td><td class="c"><span class="mv up">▲ 3</span></td></tr>
+          <tr><td class="kw">table flag</td><td class="c"><span class="band p3">Page 4</span></td><td class="p before">38.7</td><td class="p now">35.7</td><td class="c"><span class="mv up">▲ 3</span></td></tr>
+          <tr><td class="kw">telescopic flags</td><td class="c"><span class="band p2">Page 2</span></td><td class="p before">12.3</td><td class="p now">10.6</td><td class="c"><span class="mv up">▲ 2</span></td></tr>
+          <tr><td class="kw">telescopic flag pole uae</td><td class="c"><span class="band p3">Page 5</span></td><td class="p before">49.4</td><td class="p now">47.3</td><td class="c"><span class="mv up">▲ 2</span></td></tr>
+
+          <tr class="grp"><td colspan="5">🆕 Started ranking this month (no data before)</td></tr>
+          <tr><td class="kw">flag printing dubai <span class="mono" style="font-size:.68rem;color:var(--ink-faint)">(head term)</span></td><td class="c"><span class="band p3">Page 6</span></td><td class="p before">—</td><td class="p now">53.7</td><td class="c"><span class="mv new">New</span></td></tr>
+          <tr><td class="kw">stadium flags</td><td class="c"><span class="band p1">Page 1</span></td><td class="p before">—</td><td class="p now">5.1</td><td class="c"><span class="mv new">New</span></td></tr>
+          <tr><td class="kw">wall mounted flag</td><td class="c"><span class="band p1">Page 1</span></td><td class="p before">—</td><td class="p now">7.3</td><td class="c"><span class="mv new">New</span></td></tr>
+          <tr><td class="kw">l flag</td><td class="c"><span class="band p3">Page 3</span></td><td class="p before">—</td><td class="p now">26.8</td><td class="c"><span class="mv new">New</span></td></tr>
+          <tr><td class="kw">event flags dubai</td><td class="c"><span class="band p3">Page 6</span></td><td class="p before">—</td><td class="p now">60.0</td><td class="c"><span class="mv new">New</span></td></tr>
+
+          <tr class="grp"><td colspan="5">▼ Slipped (shown for full transparency)</td></tr>
+          <tr><td class="kw">conference flag</td><td class="c"><span class="band p1">Page 1</span></td><td class="p before">6.6</td><td class="p now">9.7</td><td class="c"><span class="mv down">▼ 3</span></td></tr>
+          <tr><td class="kw">table flags</td><td class="c"><span class="band p3">Page 4</span></td><td class="p before">28.8</td><td class="p now">33.0</td><td class="c"><span class="mv down">▼ 4</span></td></tr>
+          <tr><td class="kw">retractable flag pole uae</td><td class="c"><span class="band p3">Page 5</span></td><td class="p before">41.0</td><td class="p now">43.6</td><td class="c"><span class="mv down">▼ 3</span></td></tr>
+          <tr><td class="kw">telescopic flag <span class="mono" style="font-size:.68rem;color:var(--ink-faint)">(~5 impr, noisy)</span></td><td class="c"><span class="band p3">Page 5</span></td><td class="p before">21.5</td><td class="p now">47.2</td><td class="c"><span class="mv down">▼</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b>Highlights this month:</b> <b>"l shape flag pole" moved onto Page 1 (8.0 → 4.8)</b>, and the whole L-shape cluster climbed together — <b>l shaped flag 29.2 → 14.3</b>, <b>l shape flag 22.2 → 11.1</b>, <b>conference flags 31.6 → 14.5</b>. Your head term <b>"flag printing dubai" started ranking for the first time</b> (position 53.7) — deep, but now on the board, which is the first step of a 4&ndash;6 month climb.
+    </div>
+
+    <div class="caveat">
+      <h3>How to read this report — the honest fine print</h3>
+      <ul>
+        <li><b>Numbers are still small.</b> 22 clicks and ~1,110 impressions is a modest base, so big percentages come off small starting points. We show the raw numbers everywhere so nothing looks inflated.</li>
+        <li><b>Positions are averages, and low-traffic terms wobble.</b> Most terms get only a handful of impressions a month, so a single search can move a position by several spots. Treat per-keyword positions as a direction, not an exact rank. ("telescopic flag" above is a good example — its drop is almost certainly noise on ~5 impressions.)</li>
+        <li><b>One month is a short window.</b> The gains line up with the work done, but a single 28-day period cannot prove cause and effect on its own. SEO compounds over months.</li>
+        <li><b>"New" means newly visible, not yet a traffic driver.</b> Terms like flag printing dubai are appearing now but still sit deep on page 5&ndash;6; the clicks come as they climb.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INDEXING -->
+  <section>
+    <p class="sec-eyebrow">Technical health</p>
+    <h2>Indexing &amp; site foundation</h2>
+    <p class="lead">Indexing is how many of your pages Google has accepted into its search index. More quality pages indexed = more chances to rank.</p>
+    <div class="cols">
+      <div class="card pad">
+        <div class="stat-row"><span class="l">Pages indexed by Google</span><span class="r" style="color:var(--grow)">41 <span style="color:var(--ink-faint);font-weight:400">(was 37)</span></span></div>
+        <div class="stat-row"><span class="l">Not indexed</span><span class="r">279</span></div>
+        <div class="stat-row"><span class="l">— of which benign*</span><span class="r">~256</span></div>
+        <div class="stat-row"><span class="l">Real thin pages to enrich</span><span class="r">~15&ndash;20</span></div>
+        <p class="note">*Most "not indexed" URLs are RSS feeds, filter/sort links and system URLs that Google is correct to skip, not broken pages. A one-time cleanup (disable feeds + robots rule) removes most of them next month.</p>
+      </div>
+      <div class="card pad">
+        <h3 style="font-family:'IBM Plex Mono';font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px">Site speed (mobile)</h3>
+        <div class="stat-row"><span class="l">Homepage</span><span class="r" style="color:var(--grow)">99 / 100</span></div>
+        <div class="stat-row"><span class="l">Shop archive</span><span class="r" style="color:var(--amber)">74 / 100</span></div>
+        <div class="stat-row"><span class="l">Product pages</span><span class="r" style="color:var(--amber)">74 / 100</span></div>
+        <p class="note">Homepage is fast; the shop and product templates need a targeted speed fix (scheduled for next month) since that is where buyers actually land.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK DONE -->
+  <section>
+    <p class="sec-eyebrow">Work completed</p>
+    <h2>What we did this month</h2>
+    <p class="lead">The foundation phase: fixing credibility issues, telling Google clearly what you sell and where, and building your local presence. This is the groundwork that makes the movement above possible.</p>
+    <div class="loggrid">
+
+      <div class="logcard">
+        <h3><span class="tag tech">TECH</span> Foundation &amp; tracking</h3>
+        <ul class="done">
+          <li><b>Search Console + Google Analytics 4</b> connected and verified; sitemap submitted; baseline logged.</li>
+          <li>Full <b>technical diagnosis</b>: classified 140 "not-indexed" URLs, audited filters/canonicals, mapped every keyword to one page.</li>
+          <li>Fixed <b>broken text</b> (mojibake) across 23 products, categories and home.</li>
+          <li>Removed leftover <b>placeholder text</b> and fixed dead navigation links.</li>
+          <li><b>AED 0.00</b> prices replaced with a clean "Request a quote".</li>
+        </ul>
+      </div>
+
+      <div class="logcard">
+        <h3><span class="tag seo">SEO</span> On-page optimisation</h3>
+        <ul class="done">
+          <li>Rewrote <b>~39 category titles</b> to "[Product] Dubai | Prime Smart Flags".</li>
+          <li>Added unique, keyworded <b>alt text to 148 images</b> (helps image search + accessibility).</li>
+          <li>Added <b>Organization schema</b> so Google understands the business entity.</li>
+          <li>Drafted the <b>pillar page + money landing pages</b> (ready to publish next month).</li>
+        </ul>
+      </div>
+
+      <div class="logcard">
+        <h3><span class="tag geo">LOCAL</span> Google Business Profile</h3>
+        <ul class="done">
+          <li>Primary category corrected to <b>Flag store</b> (was "Digital printing"); added Sign shop + Digital printing as secondaries.</li>
+          <li>Rewrote the <b>business description</b> (keyword-rich, now live).</li>
+          <li>Added <b>10 services</b> (flag printing, telescopic poles, teardrop, table, sail, conference, L-shape, car flags and more).</li>
+          <li><b>Replied to all 15 customer reviews</b> individually.</li>
+          <li>Ran a <b>competitor teardown</b> of the top Dubai flag printers.</li>
+        </ul>
+      </div>
+
+      <div class="logcard">
+        <h3><span class="tag aeo">CONTENT</span> Ongoing engine</h3>
+        <ul class="done">
+          <li>Built a <b>30-day Google Posts calendar</b> (12 posts, keyword-targeted).</li>
+          <li>Prepared <b>7 SEO Q&amp;As</b> to seed on the profile.</li>
+          <li>Confirmed <b>social profiles linked</b> (YouTube, Facebook, Instagram).</li>
+          <li>Speed audit completed; fixes scoped for next month.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GBP snapshot -->
+  <section>
+    <p class="sec-eyebrow">Local presence</p>
+    <h2>Google Business Profile snapshot</h2>
+    <div class="cols">
+      <div class="card pad">
+        <div class="gbp-badge">4.6 <span class="stars">★★★★★</span></div>
+        <div class="stat-row" style="margin-top:8px"><span class="l">Google reviews</span><span class="r">16</span></div>
+        <div class="stat-row"><span class="l">Reviews replied to</span><span class="r" style="color:var(--grow)">16 / 16</span></div>
+        <div class="stat-row"><span class="l">Customer interactions (profile)</span><span class="r">286</span></div>
+      </div>
+      <div class="card pad">
+        <div class="stat-row"><span class="l">Primary category</span><span class="r">Flag store ✓</span></div>
+        <div class="stat-row"><span class="l">Description</span><span class="r" style="color:var(--grow)">Live ✓</span></div>
+        <div class="stat-row"><span class="l">Services listed</span><span class="r">10</span></div>
+        <div class="stat-row"><span class="l">Posts</span><span class="r">Running</span></div>
+        <p class="note">Verified profile, managed and optimised. Map Pack visibility for local "near me" searches builds over the next 2&ndash;3 months.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT MONTH -->
+  <section>
+    <p class="sec-eyebrow">The plan</p>
+    <h2>What happens next month</h2>
+    <ul class="next">
+      <li><span class="step">01</span><span><b>Publish the money landing pages</b> — pillar (/flag-printing-dubai/) plus telescopic pole, table, sail, conference and L-shape pages, each with FAQ &amp; schema. This is the biggest ranking lever.</span></li>
+      <li><span class="step">02</span><span><b>Push the near-winners over the line</b> — l shape flag, telescopic flags and conference flags are all top-of-Page-2; targeted content + internal links to lift them onto Page 1.</span></li>
+      <li><span class="step">03</span><span><b>Speed fix on shop &amp; product templates</b> — bring the 74 scores up, so every product page a buyer lands on loads fast.</span></li>
+      <li><span class="step">04</span><span><b>Indexing cleanup</b> — disable feeds + robots rule to clear the benign "not-indexed" noise, and enrich the ~15 thin product pages.</span></li>
+      <li><span class="step">05</span><span><b>Keep the local engine running</b> — weekly Google Posts, seed the Q&amp;As, and grow reviews toward 20&ndash;25.</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <b>Data sources:</b> Google Search Console (performance &amp; indexing, property https://primesmart.ae/), Google Business Profile, and Google PageSpeed Insights — all pulled live on 28 Aug 2026. Search Console figures compare the last 28 days with the previous 28 days.<br>
+    <b>Method note:</b> position figures are period averages, not fixed ranks; individual per-keyword positions rest on low impression counts and are directional. Percentage changes are shown with their raw base numbers. Ranking movement coincides with the work performed but cannot be causally attributed on a single 28-day window.<br>
+    <br>
+    Prime Smart Flags · Monthly SEO Report · Confidential · Prepared by your SEO team.
+  </footer>
+
+</div>

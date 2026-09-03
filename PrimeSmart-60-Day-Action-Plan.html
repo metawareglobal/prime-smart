@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrimeSmart — 60-Day SEO/GEO/AEO Plan</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f6f7f9; color: #1a1d21; line-height: 1.5; padding: 24px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+header { background: linear-gradient(135deg, #7a1f1f 0%, #b02a2a 100%); color: #fff; border-radius: 16px; padding: 28px 30px; margin-bottom: 18px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+header p { opacity: .93; font-size: 14px; max-width: 820px; }
+.meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { background: rgba(255,255,255,.16); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 18px; }
+@media (max-width:820px){ .kpis{grid-template-columns:repeat(2,1fr);} body{padding:12px;} }
+.kpi { background: #fff; border: 1px solid #e8eaee; border-radius: 12px; padding: 16px; }
+.kpi .n { font-size: 22px; font-weight: 800; color: #b02a2a; }
+.kpi .l { font-size: 12px; color: #6b7280; margin-top: 2px; }
+.kpi .s { font-size: 11px; color: #9aa1ab; margin-top: 4px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tab { background: #fff; border: 1px solid #e2e5ea; border-radius: 10px; padding: 10px 15px; font-size: 13px; font-weight: 600; color: #444; cursor: pointer; transition: all .15s; }
+.tab:hover { border-color: #b02a2a; color: #b02a2a; }
+.tab.active { background: #b02a2a; color: #fff; border-color: #b02a2a; }
+.panel { display: none; }
+.panel.active { display: block; }
+.card { background: #fff; border: 1px solid #e8eaee; border-radius: 14px; padding: 22px 24px; margin-bottom: 16px; }
+.card h2 { font-size: 17px; margin-bottom: 4px; }
+.card h2 .wk { color:#b02a2a; }
+.card .sub { color: #6b7280; font-size: 13px; margin-bottom: 14px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 9px 10px; background: #faf6f6; color: #7a1f1f; font-weight: 700; border-bottom: 2px solid #eaddd7; font-size: 11.5px; text-transform: uppercase; letter-spacing: .3px; }
+td { padding: 9px 10px; border-bottom: 1px solid #f0f1f3; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+.kw { font-weight: 600; }
+.pill { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.seo { background:#eaf1fb; color:#2a5fb0; } .geo { background:#f3ecfb; color:#6b3fb0; } .aeo { background:#e7f6ec; color:#1a7f3c; } .tech{ background:#fff3e0; color:#b26a00; }
+.p1 { background:#fde8e8; color:#b02020; } .p2{ background:#fff3e0; color:#b26a00; } .p3{ background:#eef2ff; color:#4353b0; }
+.done { background:#e7f6ec; color:#1a7f3c; }
+.wkhead { display:flex; align-items:center; gap:10px; margin-bottom:2px; }
+.wkbadge { background:#b02a2a; color:#fff; font-size:12px; font-weight:700; padding:4px 10px; border-radius:8px; }
+.phase { font-size:12px; color:#8a929c; font-weight:600; }
+ul.tick { list-style:none; }
+ul.tick li { padding:7px 0 7px 26px; position:relative; border-bottom:1px solid #f3f4f6; font-size:13.5px; }
+ul.tick li:last-child{ border-bottom:none; }
+ul.tick li:before { content:"\2610"; position:absolute; left:2px; top:6px; color:#b02a2a; font-size:15px; }
+ul.tick li .t { font-size:11px; font-weight:700; margin-left:6px; }
+.note { background:#fff8e6; border:1px solid #f3e3b3; border-radius:10px; padding:12px 16px; font-size:12.5px; color:#6b5a1e; margin-bottom:14px; }
+.note b { color:#4a3d0e; }
+.good { background:#eaf7ee; border:1px solid #c5e6d0; border-radius:10px; padding:12px 16px; font-size:12.5px; color:#1e5a34; margin-bottom:14px; }
+.legend { font-size:12px; color:#6b7280; margin-top:12px; display:flex; flex-wrap:wrap; gap:12px; }
+h3.blk { font-size:12.5px; color:#7a1f1f; margin:14px 0 6px; text-transform:uppercase; letter-spacing:.4px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:720px){ .grid2{grid-template-columns:1fr;} }
+/* ---- merged checklist ---- */
+.clhead{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.clbig{font-size:30px;font-weight:800;color:#b02a2a;line-height:1}
+.clprog{flex:1;min-width:200px}
+.pbar{height:9px;background:#eef0f3;border-radius:6px;overflow:hidden;margin-top:8px}
+.pbar>i{display:block;height:100%;background:linear-gradient(90deg,#b02a2a,#d94a4a);width:0;transition:width .3s}
+.reset{background:#fff;border:1px solid #e2c9c9;color:#b02020;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:600;cursor:pointer}
+.reset:hover{background:#fdecec}
+.chk{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f2f3f5;font-size:13.5px;cursor:pointer}
+.chk:last-child{border-bottom:none}
+.chk input{margin-top:3px;width:16px;height:16px;accent-color:#b02a2a;flex:0 0 auto;cursor:pointer}
+.chk .txt{flex:1}
+.chk.done .txt{color:#9aa1ab;text-decoration:line-through}
+.cnt{font-size:12px;color:#8a929c;font-weight:600;margin-left:8px}
+input.num{width:66px;padding:5px 7px;border:1px solid #d7dbe0;border-radius:7px;font-size:13px;text-align:center}
+input.num:focus{outline:none;border-color:#b02a2a}
+.mprog{height:6px;background:#eef0f3;border-radius:5px;overflow:hidden;min-width:90px}
+.mprog>i{display:block;height:100%;background:linear-gradient(90deg,#1a7f3c,#37b45c);width:0;transition:width .3s}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}
+.b-top3{background:#e7f6ec;color:#1a7f3c}.b-p1{background:#eaf7ee;color:#2a8a4a}.b-p2{background:#fff3e0;color:#b26a00}.b-p3{background:#fde8e8;color:#b02020}.b-none{background:#f2f4f7;color:#8a929c}
+.saved{font-size:11px;color:#9aa1ab;margin-top:6px}
+.stat{font-size:11px;font-weight:700;margin-left:2px}
+.clsmall{font-size:11.5px;color:#8a929c}
+.autopill{background:#eef2ff;color:#4353b0}
+.chk input:disabled{cursor:default;opacity:.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>PrimeSmart.ae — 60-Day SEO / GEO / AEO Action Plan</h1>
+<p>A day-by-week execution roadmap to move money keywords onto page 1 and into the Google Map Pack for the Dubai market. Built from your live Search Console data, UAE SERP research, and competitor teardown.</p>
+<div class="meta">
+<span class="chip">Window: 60 days</span>
+<span class="chip">Market: Dubai / UAE</span>
+<span class="chip">Start: Day 1</span>
+<span class="chip">SEO &middot; GEO &middot; AEO</span>
+</div>
+</header>
+
+<div class="kpis">
+<div class="kpi"><div class="n">30.6 &rarr; ~20</div><div class="l">Avg. position</div><div class="s">page 3 &rarr; page 2; top-20 on 3&ndash;5 terms *</div></div>
+<div class="kpi"><div class="n">37 &rarr; 80&ndash;100</div><div class="l">Indexed pages</div><div class="s">quality URLs, not junk *</div></div>
+<div class="kpi"><div class="n">0 &rarr; 15&ndash;25</div><div class="l">Google reviews</div><div class="s">GBP growing (Pack = 3&ndash;6 mo) *</div></div>
+<div class="kpi"><div class="n">33 &rarr; 80&ndash;120</div><div class="l">Clicks / 28d</div><div class="s">2&ndash;3&times; via indexing + long-tail *</div></div>
+</div>
+<div class="note" style="margin-bottom:18px;">* <b>Targets recalibrated after a 3-reviewer stress test.</b> The original numbers (pos &lt;15, 150+ indexed, 30+ reviews, Map-Pack entry) were over-ambitious for 60 days against competitors with 60&ndash;1,266 reviews and aged domains. See the <b>Stress Test &amp; Revisions</b> tab for the full critique and what changed.</div>
+
+<div class="tabs">
+<button class="tab active" data-tab="overview">Overview &amp; Targets</button>
+<button class="tab" data-tab="roadmap">60-Day Roadmap</button>
+<button class="tab" data-tab="targets">Keyword &rarr; Page Targets</button>
+<button class="tab" data-tab="pillars">SEO / GEO / AEO</button>
+<button class="tab" data-tab="kpi">Tracking &amp; KPIs</button>
+<button class="tab" data-tab="review">Stress Test &amp; Revisions</button>
+<button class="tab" data-tab="speed">Speed &amp; Core Web Vitals</button>
+<button class="tab" data-tab="checklist">✅ Checklist &amp; Tracker</button>
+<button class="tab" data-tab="content">📣 Content Calendar</button>
+</div>
+
+<div class="panel active" id="overview">
+<div class="card">
+<h2>What "rank in 60 days" realistically means</h2>
+<p class="sub">Honest expectations so we target the right wins.</p>
+<div class="good"><b>Achievable in 60 days:</b> Map Pack entry (via GBP + reviews), page 1 for long-tail money terms (e.g. <i>telescopic flag pole dubai price, conference flags dubai, royal table flags dubai, l-shape flags dubai</i>), and big jumps (page 3 &rarr; page 1&ndash;2) on terms where you already earn impressions.</div>
+<div class="note"><b>Not fully in 60 days:</b> the hardest head term <i>"flag printing dubai"</i> (aged competitors with 250&ndash;1,266 reviews) &mdash; expect page 2 movement in 60 days, page 1 by month 4&ndash;6.</div>
+<h3 class="blk">The 3 levers, and why order matters</h3>
+<table>
+<thead><tr><th>Lever</th><th>What it wins</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td><span class="pill geo">GEO</span> Google Business Profile + reviews + citations</td><td>Map Pack (sits above organic) &mdash; your fastest visible page-1</td><td>2&ndash;6 weeks</td></tr>
+<tr><td><span class="pill aeo">AEO</span> FAQs, schema, buyer-question content</td><td>People Also Ask, AI answers, featured snippets</td><td>3&ndash;8 weeks</td></tr>
+<tr><td><span class="pill seo">SEO</span> Dubai landing pages + fixes + links</td><td>Organic page-1 for money keywords</td><td>4&ndash;12 weeks</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Guiding rules</h2>
+<ul class="tick">
+<li>Fix credibility errors <b>before</b> chasing rankings. <span class="pill p1 t">week 1</span></li>
+<li>Every money keyword gets <b>one</b> dedicated Dubai landing page with keyword in URL, H1, title, first 100 words, FAQ &amp; schema.</li>
+<li>100% white-hat &mdash; earn review stars with real reviews, never the competitor's fake site-wide rating trick.</li>
+<li>Measure weekly in Search Console; double down on anything moving page 3 &rarr; page 2.</li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="roadmap">
+<div class="note"><b>How to use:</b> each week has a focused theme and a checklist. Do them in order. Tags: <span class="pill tech t">TECH</span> <span class="pill seo t">SEO</span> <span class="pill geo t">GEO</span> <span class="pill aeo t">AEO</span></div>
+
+<div class="card" style="border-color:#8a2020;background:#fbf3f3;">
+<div class="wkhead"><span class="wkbadge" style="background:#1a7f3c;">Week 0 &mdash; ✅ COMPLETE</span><span class="phase">Diagnosis run live via WP REST API + public fetches, 17 Aug 2026</span></div>
+<h2>Technical diagnosis &mdash; done. Deliverables produced.</h2>
+<div class="good" style="margin:10px 0;"><b>GSC connected &amp; verified 17 Aug.</b> Day-1 baseline logged: <b>33 clicks &middot; 2,120 impressions &middot; 1.6% CTR &middot; avg position 30.6</b> (3-mo). Indexing: 37 indexed / 265 not indexed. Findings in <code>Week0-Findings.md</code> + <code>Keyword-URL-Map-and-Redirects.md</code>.</div>
+<ul class="tick">
+<li>✅ <b>Template overlap vs dlxprint.com &mdash; PREMISE DISPROVEN.</b> dlxprint is a static Bootstrap site, NOT WordPress/miniture. No shared theme, no copied content either direction. Risk cleared; task dropped. <span class="pill tech t">TECH</span></li>
+<li>✅ <b>140 "crawled &ndash; not indexed" classified (GSC-verified).</b> Real composition is <b>mostly RSS <code>/feed/</code> URLs</b> (every product + category auto-generates one; site has 0 blog posts so none are needed) <b>+ <code>/wp-content/plugins/</code> directory URLs + a few thin <code>/product/</code> pages</b> &mdash; NOT thin categories as first assumed. Fix: disable/noindex feeds, add <code>Disallow: /wp-content/plugins/</code> to robots.txt, enrich the thin products. Most of the 140 is Google correctly ignoring feeds (benign); the real work is the handful of thin product pages. <span class="pill tech t">TECH</span></li>
+<li>✅ <b>Facet/canonical audit.</b> ?orderby/filter facets already canonical&rarr;/shop/ (GSC: 100 "alternative page w/ canonical", benign). Attribute archives low-impact. <span class="pill tech t">TECH</span></li>
+<li>✅ <b>Redirect &amp; cannibalization map.</b> Enrich categories in place (no parallel Pages); 7 dupe subcats 301&rarr;money parents; ~15 thin non-money cats noindex. One net-new Page = the pillar. <span class="pill seo t">SEO</span></li>
+<li>✅ <b>CWV measured</b> (homepage 99/LCP 1.2s; /shop/ 74/LCP 8.5s; product 74/TBT 1,090ms). LiteSpeed Cache already active. <span class="pill tech t">TECH</span></li>
+<li>✅ <b>AI crawlers NOT blocked</b> (robots.txt allows GPTBot/Google-Extended/ClaudeBot/Perplexity). <span class="pill geo t">GEO</span></li>
+</ul>
+<div class="note" style="margin-top:10px;"><b>Live-site facts confirmed:</b> theme <code>miniture</code> v1.2.0, NO child theme (needed before template edits) &middot; Rank Math + LiteSpeed active &middot; Wordfence installed but INACTIVE &middot; tagline still "Power of Brand" &middot; 8 pages, 0 posts, 5 pending product reviews. <b>GSC access ✅ done.</b> Remaining blocker for Week 1: confirm hosting backup + pricing decision on the 20 AED 0.00 products.</div>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 1</span><span class="phase">Phase 1 &middot; Foundation &amp; credibility</span></div>
+<h2>Stop the bleeding + set up tracking</h2>
+<ul class="tick">
+<li>Replace the novaworks.net social-share (OG) image sitewide with a branded 1200&times;630 image. <span class="pill tech t">TECH</span></li>
+<li>✅ Delete all placeholder text — <b>blog "Power of Brand" tagline, contact "two little houses" + "AL Khabaisai" typo, and cut-off newsletter line all removed (20 Aug)</b>. <span class="pill tech t">TECH</span></li>
+<li>✅ "AED 0.00" — <b>resolved at theme level: the 20 zero-priced products render "Request a quote" natively (span.ps-price--quote) with a working quote/WhatsApp CTA, so no AED 0.00 shows. Nothing needed changing (a manual variation-price edit was reverted). Real prices left to the client.</b> <span class="pill tech t">TECH</span></li>
+<li>✅ Fix "Flags" nav dead link (#) → <b>now points to /flag-printing-dubai/ pillar (2 Sep)</b>; homepage category tiles → real category URLs ✅ (20 Aug). <span class="pill seo t">SEO</span></li>
+<li>✅ Fix the UTF-8 encoding issue in product descriptions/meta — <b>mojibake (â€™/â€") cleared across all 30 product pages, categories &amp; home; 23 products repaired via REST (20 Aug)</b>. <span class="pill tech t">TECH</span></li>
+<li>🟡 Confirm GSC + GA4 + Bing; submit sitemap — <b>GSC verified ✅ · sitemap_index.xml submitted ✅ · GA4 live ✅ (G-QG0L2RQTFL) — 20 Aug</b>. Only Bing Webmaster left (can import from GSC). <span class="pill tech t">TECH</span></li>
+<li>Claim / verify <b>Google Business Profile</b> &mdash; Al Khabaisi, Dubai; primary category "Flag store". <span class="pill geo t">GEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 2</span><span class="phase">Phase 1 &middot; Foundation</span></div>
+<h2>On-page foundation + indexing fixes</h2>
+<ul class="tick">
+<li>🟡 Rewrite title tags + meta with keyword + "Dubai/UAE" — <b>Rank Math category title template set → all ~39 category titles now "%term% Dubai | Prime Smart Flags" ✅ (live: "Table Flags Dubai…", "Sail Flag Dubai…", 20 Aug)</b>. Products intentionally left as-is (avoid cannibalizing the money categories). Per-category meta descriptions + money-page titles: pending. <span class="pill seo t">SEO</span></li>
+<li>✅ Add descriptive, keyworded alt text to all product/category images — <b>148 images set with unique Dubai/UAE alt text via REST (20 Aug)</b>. <span class="pill seo t">SEO</span></li>
+<li>🟡 Fix crawl errors + thin pages — <b>GSC-verified 20 Aug: all 5×404, 3×other-4xx &amp; 2×5xx are BENIGN</b> (wishlist <code>?add_to_wishlist</code> params, RSS <code>/feed/</code>, <code>admin-ajax.php</code>, system URLs) — <b>no real page is broken</b>. Real lever = the 139 "crawled&ndash;not indexed" (feeds/params/thin products): needs robots rules (wp-admin/file) + content enrichment (Phase 4). <span class="pill tech t">TECH</span></li>
+<li>🟡 Add LocalBusiness + Organization schema — <b>Organization schema set via Rank Math Local SEO ✅ (name, legal name, PSF logo, URL → Knowledge Graph), 20 Aug</b>. Full LocalBusiness with address/phone/hours needs Rank Math PRO or a manual JSON-LD block — pending. <span class="pill geo t">GEO</span></li>
+<li>GBP: upload 20+ real flag photos, add services/products, set hours. <span class="pill geo t">GEO</span></li>
+<li>List on Yellow Pages UAE + Dubai Chamber + connect the dead footer socials. <span class="pill geo t">GEO</span></li>
+<li>🟡 Catalogue grew to 33 products &mdash; <b>3 new (Terrace, Roof Top &amp; Building Flags, added 27 Aug)</b>, titles/meta already Dubai-optimized on add; alt text on their images brought up to standard (2 Sep). Flagged for the client: Roof Top Flags and Building Flags currently reuse 2 identical photos &mdash; worth uploading dedicated roof-top shots. <span class="pill seo t">SEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 3</span><span class="phase">Phase 2 &middot; Money pages</span></div>
+<h2>Publish the pillar page + first 2 landing pages</h2>
+<ul class="tick">
+<li>✅ Publish <b>/flag-printing-dubai/</b> pillar page — <b>live &amp; set as Flags hub; full redesign (hero, 6 services, split, 6 flag-type cards, why-band, FAQ), LocalBusiness+Service+FAQPage schema, fully responsive (2 Sep)</b>. <span class="pill seo t">SEO</span></li>
+<li>Publish <b>/telescopic-flag-pole-dubai/</b> &mdash; biggest GSC opportunity (~700 impressions, 0 clicks). <span class="pill seo t">SEO</span></li>
+<li>Publish <b>/table-flags-dubai/</b> (91 impressions already). <span class="pill seo t">SEO</span></li>
+<li>Add FAQPage schema to all three; validate in Rich Results Test. <span class="pill aeo t">AEO</span></li>
+<li>Internal-link pillar &harr; every flag category/product. <span class="pill seo t">SEO</span></li>
+<li>Request indexing for all new pages. <span class="pill tech t">TECH</span></li>
+<li>Start the <b>review engine</b>: WhatsApp ask on every delivery. <span class="pill geo t">GEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 4</span><span class="phase">Phase 2 &middot; Money pages</span></div>
+<h2>Landing pages 3&ndash;5 + AEO kickoff</h2>
+<ul class="tick">
+<li>Publish <b>/sail-flag-printing-dubai/</b>, <b>/conference-flags-dubai/</b>, <b>/l-shape-flags-dubai/</b>. <span class="pill seo t">SEO</span></li>
+<li>Add FAQ + schema to each; real prices on every product. <span class="pill aeo t">AEO</span></li>
+<li>Blog post #1: <b>"How much does flag printing cost in Dubai?"</b> <span class="pill aeo t">AEO</span></li>
+<li>GBP: first weekly post; reviews target 10+. <span class="pill geo t">GEO</span></li>
+<li>Add 5 more local citations (Yelp UAE, HiDubai, Hotfrog, Connect.ae, Yello.ae). <span class="pill geo t">GEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 5</span><span class="phase">Phase 3 &middot; Content &amp; authority</span></div>
+<h2>Content engine + speed</h2>
+<ul class="tick">
+<li>Publish <b>/advertising-flags-dubai/</b> + <b>/teardrop-flags-dubai/</b>. <span class="pill seo t">SEO</span></li>
+<li>Blog #2: <b>"Sail flag vs teardrop flag &mdash; which is best for Dubai events?"</b> <span class="pill aeo t">AEO</span></li>
+<li>Blog #3: <b>"Best flag material for the UAE climate (heat &amp; sand)"</b>. <span class="pill aeo t">AEO</span></li>
+<li>Speed polish (homepage already 99/100): add image width/height (CLS), lazy-load offscreen images, trim the 53 CSS / 99 JS via caching plugin; test product/category pages. See Speed tab. <span class="pill tech t">TECH</span></li>
+<li>Add on-site product review request flow. <span class="pill aeo t">AEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 6</span><span class="phase">Phase 3 &middot; Content &amp; authority</span></div>
+<h2>Trust, links &amp; more coverage</h2>
+<ul class="tick">
+<li>Publish <b>/car-flags-dubai/</b> + a <b>Table Flags Royal</b> focus page. <span class="pill seo t">SEO</span></li>
+<li>Add About page, client logos, portfolio/gallery, turnaround + delivery promise. <span class="pill seo t">SEO</span></li>
+<li>Backlinks Phase 2: B2B/supplier &amp; event-vendor listings, 2&ndash;3 partner links. <span class="pill seo t">SEO</span></li>
+<li>Blog #4: <b>"What size flag do I need? &mdash; Dubai guide"</b>. <span class="pill aeo t">AEO</span></li>
+<li>Reviews target: 20+; reply to all. <span class="pill geo t">GEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 7</span><span class="phase">Phase 4 &middot; Push &amp; optimise</span></div>
+<h2>Optimise from data</h2>
+<ul class="tick">
+<li>Search Console: find pages on page 2 (pos 11&ndash;20) and strengthen. <span class="pill seo t">SEO</span></li>
+<li>Improve CTR: rewrite titles/meta of high-impression, low-CTR pages. <span class="pill seo t">SEO</span></li>
+<li>Blog #5: <b>"Flags for exhibitions &amp; events in Dubai &mdash; buyer's checklist"</b>. <span class="pill aeo t">AEO</span></li>
+<li>Backlinks Phase 3: 1 local PR / guest post; a case-study page. <span class="pill seo t">SEO</span></li>
+<li>GBP: add products with prices; 2 posts; reviews 25+. <span class="pill geo t">GEO</span></li>
+</ul>
+</div>
+
+<div class="card">
+<div class="wkhead"><span class="wkbadge">Week 8 + Days 57&ndash;60</span><span class="phase">Phase 4 &middot; Push &amp; measure</span></div>
+<h2>Consolidate, re-index, report</h2>
+<ul class="tick">
+<li>Re-request indexing for updated pages; fix remaining coverage errors. <span class="pill tech t">TECH</span></li>
+<li>Add internal links from blog posts &rarr; money landing pages (anchor = keyword). <span class="pill seo t">SEO</span></li>
+<li>Final schema validation pass (Product/FAQ/LocalBusiness). <span class="pill aeo t">AEO</span></li>
+<li>Reviews: enable true AggregateRating on pages with real reviews. <span class="pill geo t">GEO</span></li>
+<li>60-day report vs Day-1 baseline. <span class="pill tech t">TECH</span></li>
+<li>Plan month 3: keep publishing + links; push head term "flag printing dubai". <span class="pill seo t">SEO</span></li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="targets">
+<div class="card">
+<h2>Money keyword &rarr; page &rarr; 60-day target</h2>
+<p class="sub">Priority order. "Now" = current avg position from Search Console where data exists.</p>
+<table>
+<thead><tr><th>Money keyword</th><th>Target page</th><th>Now</th><th>60-day goal</th><th>Priority</th></tr></thead>
+<tbody>
+<tr><td class="kw">telescopic flag pole dubai / uae</td><td>/telescopic-flag-pole-dubai/</td><td>~pg 3 (700 impr, 0 clk)</td><td class="kw">Page 1</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">conference flags dubai</td><td>/conference-flags-dubai/</td><td>ranking (10 clicks)</td><td class="kw">Top 5</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">table flags dubai</td><td>/table-flags-dubai/</td><td>~pg 3 (91 impr)</td><td class="kw">Page 1</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">l shape flags dubai</td><td>/l-shape-flags-dubai/</td><td>~pg 3 (138 impr)</td><td class="kw">Page 1</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">royal table flags dubai</td><td>Table Flags Royal page</td><td>&mdash;</td><td class="kw">Page 1</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">sail flags dubai</td><td>/sail-flag-printing-dubai/</td><td>&mdash;</td><td class="kw">Page 1&ndash;2</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">teardrop flags dubai</td><td>/teardrop-flags-dubai/</td><td>&mdash;</td><td class="kw">Page 1&ndash;2</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">advertising flags dubai</td><td>/advertising-flags-dubai/</td><td>&mdash;</td><td class="kw">Page 2</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">car flags dubai</td><td>/car-flags-dubai/</td><td>&mdash;</td><td class="kw">Page 1&ndash;2</td><td><span class="pill p3">P3</span></td></tr>
+<tr><td class="kw">flag printing dubai (head)</td><td>/flag-printing-dubai/ (pillar)</td><td>~pg 3</td><td class="kw">Page 2 (pg 1 by M4&ndash;6)</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">"flag store" &mdash; Map Pack</td><td>Google Business Profile</td><td>not present</td><td class="kw">Long-tail/near-me</td><td><span class="pill p1">P1</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Long-tail money terms (fast page-1, build into pages/FAQs)</h2>
+<div class="grid2">
+<ul class="tick">
+<li>telescopic flag pole dubai price / for sale</li>
+<li>flag printing dubai price / cost</li>
+<li>cheap table flags dubai</li>
+<li>royal table flags dubai</li>
+</ul>
+<ul class="tick">
+<li>sail flags dubai price</li>
+<li>custom flag printing dubai</li>
+<li>flag suppliers in dubai</li>
+<li>branded flags for events dubai</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="panel" id="pillars">
+<div class="card">
+<h2><span class="pill seo">SEO</span> &mdash; organic ranking foundation</h2>
+<ul class="tick">
+<li>Dubai landing page per money keyword (URL + H1 + title + first 100 words + FAQ + schema).</li>
+<li>Pillar-and-spoke internal linking: /flag-printing-dubai/ hub &harr; every category &amp; product.</li>
+<li>Technical: fix 140 unindexed pages, 404s/5xx, titles/meta/alt, mobile speed (LCP &lt; 2.5s).</li>
+<li>Real prices on every product; kill AED 0.00.</li>
+<li>Backlinks: local citations &rarr; B2B/niche &rarr; PR/content (relevance over volume).</li>
+</ul>
+</div>
+<div class="card">
+<h2><span class="pill geo">GEO</span> &mdash; local Dubai + AI visibility</h2>
+<h3 class="blk">Local (Map Pack)</h3>
+<ul class="tick">
+<li>Google Business Profile: category "Flag store" (+ secondary Sign shop/Digital printer), full NAP, photos, products, weekly posts.</li>
+<li>Genuine Google reviews (ask everyone); reply to all.</li>
+<li>Consistent NAP across 15&ndash;20 UAE citations; ONE primary phone.</li>
+<li>LocalBusiness schema + embedded map on site.</li>
+</ul>
+<h3 class="blk">Generative (AI answers)</h3>
+<ul class="tick">
+<li>Clear, factual, quotable copy ("Sail flags in Dubai start around AED 270...").</li>
+<li>UAE-climate expertise content; FAQ &amp; Product schema; Organization sameAs.</li>
+<li>Editorial brand mentions across blogs/press (AI weights cited brands).</li>
+</ul>
+</div>
+<div class="card">
+<h2><span class="pill aeo">AEO</span> &mdash; answer engines &amp; snippets</h2>
+<ul class="tick">
+<li>FAQ block + FAQPage schema on every landing page (20+ questions overall).</li>
+<li>Buyer-question blog posts + comparison/glossary content.</li>
+<li>Answer live PAA verbatim (cost, turnaround, best material, double-sided, best for events).</li>
+<li>Collect reviews &rarr; star snippets that lift CTR.</li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="kpi">
+<div class="card">
+<h2>Weekly tracking (Search Console + GA4 + GBP)</h2>
+<table>
+<thead><tr><th>Metric</th><th>Day-1 baseline</th><th>Day-30</th><th>Day-60 goal</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td class="kw">Avg. position</td><td>30.6</td><td>~25</td><td class="kw">~20 (page 2)</td><td>Search Console</td></tr>
+<tr><td class="kw">Clicks (rolling 28d)</td><td>~11</td><td>~25</td><td class="kw">40&ndash;70</td><td>Search Console</td></tr>
+<tr><td class="kw">Impressions (28d)</td><td>~700</td><td>1,300</td><td class="kw">2,000&ndash;2,500</td><td>Search Console</td></tr>
+<tr><td class="kw">Indexed pages (quality)</td><td>37</td><td>60+</td><td class="kw">80&ndash;100</td><td>GSC Coverage</td></tr>
+<tr><td class="kw">Google reviews (ask everyone)</td><td>0</td><td>8&ndash;12</td><td class="kw">15&ndash;25</td><td>GBP</td></tr>
+<tr><td class="kw">Non-brand terms in top 20</td><td>0&ndash;1</td><td>2&ndash;3</td><td class="kw">3&ndash;5</td><td>Rank tracker</td></tr>
+<tr><td class="kw">Map Pack presence</td><td>No</td><td>GBP live + growing</td><td class="kw">Long-tail/near-me (full pack = 3&ndash;6 mo)</td><td>Maps</td></tr>
+</tbody>
+</table>
+<div class="note"><b>Review cadence:</b> 15-min Search Console check every Monday. Any keyword hitting position 11&ndash;20 = priority to push. Log rankings weekly for the money list.</div>
+</div>
+<div class="card">
+<h2>Deliverables prepared in this folder</h2>
+<ul class="tick">
+<li><b>PrimeSmart-Keyword-and-Competitor-Plan.html</b> &mdash; money keywords, PAA, competitor teardown, GBP, hat audit, backlinks. <span class="pill done t">ready</span></li>
+<li><b>Flag-Printing-Dubai-Pillar-Page.md</b> &mdash; copy + FAQ + JSON-LD schema. <span class="pill done t">ready</span></li>
+<li><b>Review-Collection-Flow.md</b> &mdash; WhatsApp templates + steps. <span class="pill done t">ready</span></li>
+<li><b>PrimeSmart-SEO-AEO-GEO-Audit.md</b> &mdash; full site audit + GSC findings. <span class="pill done t">ready</span></li>
+<li><b>CLAUDE.md</b> &mdash; execution handoff brief. <span class="pill done t">ready</span></li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="review">
+<div class="card">
+<h2>Independent stress test &mdash; 3 reviewers</h2>
+<p class="sub">Reviewed by an organic/technical SEO strategist, a local-GEO/AEO specialist, and a devil's-advocate red team. Verdict: <b>direction is right, but several 60-day targets were over-promised and 3 root-cause risks were under-diagnosed.</b> All now reflected in the plan.</p>
+</div>
+<div class="card">
+<h2>Root-cause risks (now fixed &rarr; Week 0)</h2>
+<table>
+<thead><tr><th>Risk</th><th>Why it matters</th><th>Fix added</th></tr></thead>
+<tbody>
+<tr><td class="kw">Template duplication with dlxprint.com</td><td>Shared template with a page-1 competitor can cap rankings sitewide</td><td>Week 0 overlap audit + forced differentiation</td></tr>
+<tr><td class="kw">140 "crawled &ndash; not indexed" = thin content</td><td>Adding more pages risks the same fate</td><td>Diagnose each URL; KPI = "quality indexed"</td></tr>
+<tr><td class="kw">WooCommerce facet/canonical bloat (92)</td><td>Filter/sort URLs burn crawl budget</td><td>Week 0 canonical/robots audit</td></tr>
+<tr><td class="kw">Cannibalization: pillar vs category vs product</td><td>3 URLs competing for one query</td><td>Week 0 keyword&rarr;URL map + 301s</td></tr>
+<tr><td class="kw">"Telescopic flag pole" intent mismatch</td><td>~700 impr, 0 clicks &mdash; many want the pole, not printing</td><td>Page covers pole-only + bundles + price</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>GEO / local risks flagged</h2>
+<ul class="tick">
+<li><b>FZ-LLC vs Dubai-mainland address = GBP verification red flag.</b> Confirm trade-licence vs address before claiming; if a workshop, register as Service-Area Business. <span class="pill p1 t">critical</span></li>
+<li><b>Two phone numbers = NAP inconsistency.</b> Pick ONE primary for GBP + all citations.</li>
+<li><b>Review compliance.</b> Ask EVERY customer, no incentives, stagger asks, tolerate 4-star.</li>
+<li><b>16-hour hours</b> may be flagged implausible &mdash; verify staffed hours.</li>
+<li><b>GBP categories:</b> add secondary (Sign shop, Digital printer, Advertising agency).</li>
+<li><b>Local Service Ads</b> may not cover this UAE vertical &mdash; verify; else Performance Max/Local.</li>
+</ul>
+</div>
+<div class="card">
+<h2>AEO / AI-citation gaps flagged</h2>
+<ul class="tick">
+<li><b>Go deeper than 12 FAQs</b> &mdash; target 20+; add turnaround, "print my own logo", digital vs dye-sublimation, fabric weight, size-by-height.</li>
+<li><b>Add comparison + glossary content</b> ("what is a sail flag", "sail vs teardrop vs feather").</li>
+<li><b>Editorial mentions &gt; directories for AI.</b> Add Organization schema with <code>sameAs</code> + a Wikidata entity.</li>
+<li><b>Give LLMs quotable facts</b> + author bios/E-E-A-T.</li>
+</ul>
+</div>
+<div class="card">
+<h2>Scope &amp; delivery reality</h2>
+<div class="note" style="background:#fdecec;border-color:#f3c0c0;color:#8a2020;"><b>Red-team verdict:</b> ~10 landing pages + 5 blog posts + speed + citations + reviews + PR in 8 weeks is 12&ndash;16 weeks of work for one person. Rushed = thin pages that never rank.</div>
+<ul class="tick">
+<li><b>Quality over quota:</b> 4&ndash;5 tight money pages + pillar; 2&ndash;3 strong posts.</li>
+<li>Citations &amp; backlinks = <b>ongoing background</b>, not week-locked.</li>
+<li><b>Gate publishing</b> on evidence of re-crawl improvement.</li>
+<li><b>Two single points of failure:</b> GBP verification (start Day 1); reviews depend on the client messaging customers (assign an owner).</li>
+<li><b>Resolve AED 0.00 / pricing</b> &mdash; use "from AED X" if quote-based.</li>
+</ul>
+</div>
+<div class="card">
+<h2>What "success at day 60" honestly looks like</h2>
+<ul class="tick">
+<li>Site errors gone; 80&ndash;100 quality pages indexed; the 140-page problem materially reduced.</li>
+<li>3&ndash;5 non-branded money terms in the top 20; 1&ndash;2 long-tail on page 1.</li>
+<li>GBP live, optimized, 15&ndash;25 genuine reviews, showing for long-tail/near-me searches.</li>
+<li>Impressions &amp; clicks up 2&ndash;3&times;; foundation set for page-1 head terms in months 3&ndash;6.</li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="speed">
+<div class="card">
+<h2>Speed test &mdash; live PageSpeed Insights + real browser (17 Aug 2026)</h2>
+<p class="sub">Tested primesmart.ae homepage in Google PageSpeed Insights (mobile) and measured the live page in a real Chrome browser. Honest result: <b>faster than we assumed</b> &mdash; the earlier "Elementor is heavy, likely slow" note was wrong for the homepage.</p>
+<div class="kpis" style="margin-bottom:14px;">
+<div class="kpi"><div class="n">99</div><div class="l">Performance (mobile)</div><div class="s">PSI lab</div></div>
+<div class="kpi"><div class="n">100</div><div class="l">Best Practices &amp; SEO</div><div class="s">Accessibility 95</div></div>
+<div class="kpi"><div class="n">1.2s</div><div class="l">LCP (lab)</div><div class="s">good (&lt;2.5s)</div></div>
+<div class="kpi"><div class="n">100ms</div><div class="l">Total Blocking Time</div><div class="s">good (&lt;200ms)</div></div>
+</div>
+<div class="good"><b>Homepage verdict:</b> not a ranking problem &mdash; lab CWV all pass (FCP 1.2s, LCP 1.2s, TBT 100ms). Images already WebP.</div>
+<div class="note" style="background:#fdecec;border-color:#f3c0c0;color:#8a2020;"><b>But the money pages are slower &mdash; and that matters more.</b> The <b>product page</b> (sail flags) scored <b>Performance 74</b> with <b>TBT 1,090ms</b> and <b>326 KiB of unused CSS</b>. Your money keywords land on these product/category templates, so this is where the real speed work is. Field data = "No Data" (too little traffic yet). Don't do a full rebuild &mdash; do a <b>targeted fix on the product/category template</b> (unused CSS + JS deferral).</div>
+</div>
+<div class="card" style="border-color:#8a2020;background:#fbf3f3;">
+<h2>⚠️ Re-test, 2 Sep 2026 &mdash; speed has regressed, not improved</h2>
+<p class="sub">None of the Phase 2 speed fixes below have shipped yet (no plugin/template work done) &mdash; this is a fresh honest baseline, not a result of any change made. Scores are <b>worse</b> than the 17 Aug read, most likely extra image/JS weight from the 3 products added 27 Aug plus normal PSI run-to-run variance. Treat this as the current urgency signal, not a regression to "undo".</p>
+<table>
+<thead><tr><th>Page</th><th>Perf (was)</th><th>LCP (was)</th><th>New issues</th></tr></thead>
+<tbody>
+<tr><td class="kw">/shop/</td><td class="diffH">47 <span class="clsmall">(74)</span></td><td class="diffH">6.7s <span class="clsmall">(8.5s)</span></td><td>CLS 0.31 (new/bad) &middot; render-blocking 2,850ms savings &middot; 646 KiB image delivery &middot; 704 KiB cache</td></tr>
+<tr><td class="kw">Product (sail flags)</td><td class="diffH">58 <span class="clsmall">(74)</span></td><td class="diffH">8.9s <span class="clsmall">(1.6s)</span></td><td>TBT improved to 70ms (was 1,090ms) but LCP got much worse &middot; render-blocking 2,700ms savings &middot; 356 KiB image delivery</td></tr>
+</tbody>
+</table>
+<div class="note" style="margin-top:10px;">Unused CSS (~135 KiB) and render-blocking requests show up as the top savings on <b>both</b> page types now &mdash; still points to the same Phase 2 fix: Elementor "Improved CSS/Asset Loading" + a caching plugin's unused-CSS removal + deferring non-critical JS. This needs wp-admin/plugin access to execute (not REST-writable) &mdash; still blocked pending that access.</div>
+</div>
+
+<div class="card" style="border-color:#1a7f3c;background:#f2faf5;">
+<h2>✅ Fixed same day, 2 Sep 2026 &mdash; LiteSpeed Cache was installed but switched OFF</h2>
+<p class="sub">Found the root cause of the regression above: <b>LiteSpeed Cache was already installed on the site but had been deactivated</b> (it was active back on 17 Aug per the Week 0 diagnosis, then someone/something turned it off). No caching layer = every request rebuilt the full page. Re-activated it via the WordPress REST API (no wp-admin login needed &mdash; this one was possible from here) and re-tested immediately.</p>
+<table>
+<thead><tr><th>Page</th><th>Perf: before &rarr; after</th><th>LCP: before &rarr; after</th><th>TBT / CLS: before &rarr; after</th></tr></thead>
+<tbody>
+<tr><td class="kw">/shop/</td><td class="kw">47 &rarr; <span class="diffL">91</span></td><td class="kw">6.7s &rarr; <span class="diffL">2.8s</span></td><td>10ms&rarr;0ms &middot; 0.31&rarr;0.001</td></tr>
+<tr><td class="kw">Product (sail flags)</td><td class="kw">58 &rarr; <span class="diffL">72</span></td><td class="kw">8.9s &rarr; <span class="diffM">5.4s</span></td><td>70ms&rarr;0ms &middot; 0.043&rarr;0</td></tr>
+</tbody>
+</table>
+<div class="good" style="margin-top:10px;"><b>Checklist item "Add caching + CDN" is now genuinely done</b> &mdash; verified live via the <code>X-LiteSpeed-Cache: hit</code> response header, and confirmed the site still renders correctly (shop, product, homepage all 200, no fatal errors) after activation.</div>
+<div class="note" style="margin-top:10px;"><b>What's left for a full Phase 2 pass:</b> the product page's LCP (5.4s) is still above the 2.5s target &mdash; that's the hero product image not being prioritized/sized, which is a template-level fix (fetchpriority, explicit width/height) inside Elementor/theme markup. LiteSpeed Cache's own CSS/JS optimization tab (remove unused CSS, defer JS, image lazy-load) is also still OFF by default and has no REST route &mdash; both need one-time configuration in wp-admin (LiteSpeed Cache → Page Optimization).</div>
+</div>
+
+<div class="card">
+<h2>Full-site speed results (PSI mobile, 17 Aug 2026)</h2>
+<p class="sub">Different page types score very differently &mdash; the homepage is not representative.</p>
+<table>
+<thead><tr><th>Page tested</th><th>Perf</th><th>LCP</th><th>TBT</th><th>Key issue</th></tr></thead>
+<tbody>
+<tr><td class="kw">Homepage</td><td class="diffL">99</td><td class="diffL">1.2s</td><td>100ms</td><td>Images missing width/height (minor)</td></tr>
+<tr><td class="kw">Shop archive (/shop/)</td><td class="diffM">74</td><td class="diffH">8.5s</td><td>40ms</td><td><b>LCP 8.5s</b> (grid image not prioritized) + render-blocking 660ms + 235 KiB unused JS &middot; SEO 92</td></tr>
+<tr><td class="kw">Product page (sail flags)</td><td class="diffM">74</td><td>1.6s</td><td class="diffH">1,090ms</td><td>326 KiB unused CSS + heavy JS (high TBT)</td></tr>
+<tr><td class="kw">Product page (l-shape flags)</td><td>~74</td><td>&mdash;</td><td>&mdash;</td><td>Same product template as sail &rarr; expect ~74; PSI rate-limited, re-test</td></tr>
+</tbody>
+</table>
+<div class="note" style="background:#fdecec;border-color:#f3c0c0;color:#8a2020;"><b>Read:</b> homepage is fine (99), but every page a buyer actually lands on scores <b>74</b>. Two distinct problems: (1) the <b>shop archive has LCP 8.5s</b> &mdash; its main grid image isn't prioritized/sized, so the page paints very slowly on mobile; (2) <b>product pages have TBT 1,090ms</b> from heavy JS + 326 KiB unused CSS. Both are template-level fixes: fix once, every money/category page benefits. The archive's LCP 8.5s is the most urgent.</div>
+</div>
+
+<div class="card">
+<h2>What the real-browser scan found (raw)</h2>
+<table>
+<thead><tr><th>Signal</th><th>Measured</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td class="kw">Total requests</td><td>187</td><td class="diffM">High &mdash; bloat, but lab still fast</td></tr>
+<tr><td class="kw">CSS files</td><td>53 stylesheets</td><td class="diffM">Elementor/Woo fragmentation</td></tr>
+<tr><td class="kw">JS files</td><td>99 scripts</td><td class="diffM">Combine/defer when convenient</td></tr>
+<tr><td class="kw">Images</td><td>WebP, mostly optimized</td><td class="diffL">Good</td></tr>
+<tr><td class="kw">Images without width/height</td><td>6 (PSI flagged)</td><td class="diffH">Fix &mdash; causes layout shift (CLS)</td></tr>
+<tr><td class="kw">Images not lazy-loaded</td><td>18</td><td class="diffM">Lazy-load offscreen ones</td></tr>
+<tr><td class="kw">Server response (TTFB, real device)</td><td>~2.2s</td><td class="diffM">Add caching + CDN for real users</td></tr>
+<tr><td class="kw">DOM nodes</td><td>2,697</td><td class="diffL">Within limits</td></tr>
+</tbody>
+</table>
+<div class="src">Sources: pagespeed.web.dev (mobile lab, 17 Aug 2026) + performance API scan of the live homepage in Chrome. Lab uses a clean throttled environment; real-user speed on slow UAE mobile networks can differ, which is why the caching/CDN + image fixes below still matter.</div>
+</div>
+
+<div class="card">
+<h2>Fix directions &mdash; speed (prioritized)</h2>
+<ul class="tick">
+<li><b>Fix the shop/archive LCP (8.5s) &mdash; most urgent.</b> The product-grid's first image isn't prioritized: add explicit width/height, serve a right-sized WebP, add <code>fetchpriority="high"</code> to the first row, lazy-load the rest, and cut the 660ms render-blocking (defer non-critical CSS/JS) + 235 KiB unused JS. Target LCP &lt; 2.5s. <span class="pill p1 t">P1 urgent</span></li>
+<li><b>Fix the product/category template (biggest structural win).</b> Remove the 326 KiB unused CSS and cut TBT: enable Elementor "Improved CSS/Asset Loading", add WP Rocket "Remove Unused CSS" (or FlyingPress/Perfmatters), and <b>delay/defer non-critical JS</b> (wishlist, cart fragments, sliders) until interaction. This lifts every money landing page at once. <span class="pill p1 t">P1 biggest</span></li>
+<li><b>Add explicit width &amp; height to every image</b> (PSI flagged; 6 found missing). Stops layout shift as images load &mdash; protects CLS before real traffic arrives. <span class="pill p1 t">P1 easy</span></li>
+<li><b>Lazy-load offscreen images</b> (18 not lazy) &mdash; add <code>loading="lazy"</code> to below-the-fold images; keep the hero eager with <code>fetchpriority="high"</code>. <span class="pill p1 t">P1</span></li>
+<li><b>Add page caching + a CDN</b> (WP Rocket / LiteSpeed / FlyingPress + Cloudflare) &mdash; cuts the ~2.2s TTFB for real users even though lab passed. <span class="pill p2 t">P2</span></li>
+<li><b>Trim the 53 CSS / 99 JS</b> &mdash; enable Elementor "Improved CSS/Asset Loading", combine/minify, remove unused plugins' assets. Maintainability + real-network win. <span class="pill p2 t">P2</span></li>
+<li><b>Test product &amp; category templates in PSI</b> (e.g. /product/sail-flags-curve-top-flag/, a category page) &mdash; don't assume the homepage's 99 applies sitewide; fix whichever scores &lt; 90. <span class="pill p1 t">P1</span></li>
+<li><b>Re-run PSI after each change</b> and watch the field-data section fill in as traffic grows. <span class="pill p3 t">ongoing</span></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Fix directions &mdash; SEO (what PSI's "SEO 100" does &amp; doesn't mean)</h2>
+<div class="note"><b>Important:</b> PSI "SEO 100" only means the page passes Lighthouse's <i>basic technical</i> checks (crawlable, has title/meta, mobile-friendly, valid tap targets). It does <b>NOT</b> mean you'll rank &mdash; ranking is content, keywords, links &amp; GBP (the rest of this plan). Don't mistake a green 100 for "SEO done".</div>
+<ul class="tick">
+<li>Technical SEO basics <b>pass</b> (title/meta present, mobile-friendly, crawlable, HTTPS, canonicals) &mdash; keep them. <span class="pill done t">ok</span></li>
+<li>The real SEO gaps are <b>not</b> Lighthouse-visible: generic titles with no "Dubai", placeholder text, 140 unindexed thin pages, no landing pages, no reviews. Those are handled in Weeks 0&ndash;8. <span class="pill seo t">SEO</span></li>
+<li>Accessibility 95 (not 100) slightly helps SEO/UX &mdash; check colour contrast &amp; image alt text (also a ranking + image-search signal). <span class="pill seo t">SEO</span></li>
+<li>Add width/height + alt to images = speed (CLS) <b>and</b> SEO (image search) in one pass. <span class="pill seo t">SEO</span></li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="checklist">
+<div class="note">Living tracker &mdash; tick tasks as you do them, log your numbers weekly. Everything you check or type is <b>saved on this device</b> and persists across reloads. Phases 0&ndash;3 are gates: do them before publishing pages. Tags: <span class="pill tech t">TECH</span> <span class="pill seo t">SEO</span> <span class="pill geo t">GEO</span> <span class="pill aeo t">AEO</span></div>
+<div class="card">
+<div class="clhead">
+<div><div class="clbig" id="ringpct">0%</div><div class="clsmall"><b id="doneCount">0</b> of <b id="totalCount">0</b> tasks done</div></div>
+<div class="clprog"><div class="clsmall" id="lastSaved">Not started yet</div><div class="pbar"><i id="overallBar"></i></div></div>
+<button class="reset" id="resetDaily">Reset daily routine</button>
+</div>
+<div style="margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<button class="reset" id="autoCheckBtn">🔄 Re-check site now</button>
+<span class="clsmall" id="autoStatus">Auto-checks run when this tab opens.</span>
+</div>
+<div class="clsmall" style="margin-top:8px">Items tagged <span class="pill autopill">AUTO</span> tick themselves from the live website when the change is live. Everything else is manual (needs Search Console / GBP / your confirmation — no honest way to auto-detect those here).</div>
+</div>
+<div id="phases"></div>
+<div class="card">
+<h2>Progress vs targets</h2>
+<p class="sub">Update "Current" weekly from Search Console / GBP. The bar shows distance from baseline &rarr; target.</p>
+<table><thead><tr><th>Metric</th><th>Baseline</th><th>Current</th><th>Target</th><th style="width:120px">Progress</th></tr></thead><tbody id="metricRows"></tbody></table>
+<div class="saved" id="metricSaved"></div>
+</div>
+<div class="card">
+<h2>Money keyword rank tracker</h2>
+<p class="sub">Log each keyword's current Google position weekly (blank = not ranking). Status updates automatically. Goal: Top 3.</p>
+<table><thead><tr><th>Money keyword</th><th>Target page</th><th style="width:80px">Pos.</th><th>Status</th><th>Goal</th></tr></thead><tbody id="rankRows"></tbody></table>
+<div class="saved" id="rankSaved"></div>
+</div>
+<div class="card" style="border-color:#8a2020;">
+<h2>📊 GSC Page Indexing &mdash; live issue analysis <span class="cnt">21 Aug 2026 · 39 indexed / 264 not indexed</span></h2>
+<p class="sub">All 8 "not indexed" reasons drilled live in Search Console. Verdict: the scary "264 not indexed" is <b>~250 benign URLs Google is correct to skip</b> (feeds, facets, system/param URLs). Only a handful of real thin pages need work.</p>
+<table>
+<thead><tr><th>Reason (GSC)</th><th>Pages</th><th>What it actually is</th><th>Verdict / action</th></tr></thead>
+<tbody>
+<tr><td class="kw">Alternative page w/ proper canonical</td><td>100</td><td>WooCommerce <code>?orderby=</code> / filter / sort facet URLs, correctly canonicalised &rarr; <code>/shop/</code></td><td><span class="pill done">Benign — no action</span></td></tr>
+<tr><td class="kw">Crawled &ndash; currently not indexed</td><td>139</td><td>Mostly <code>/feed/</code> RSS (every product/category + site) + <code>/wp-content/plugins/</code> dirs; <b>~15&ndash;20 are REAL thin product/category pages</b> (bunting, conference, telescopic, pennant, car, table-flags-royal&hellip;)</td><td><span class="pill p1">ACTION</span> feeds+plugins: block · thin pages: enrich + reindex</td></tr>
+<tr><td class="kw">Excluded by 'noindex' tag</td><td>8</td><td>Intentional: product tags + thin non-money categories set to noindex in Week 0</td><td><span class="pill done">Benign — intended</span></td></tr>
+<tr><td class="kw">Page with redirect</td><td>7</td><td>Working 301s (dupe subcats &rarr; money parents)</td><td><span class="pill done">Benign — intended</span></td></tr>
+<tr><td class="kw">Not found (404)</td><td>5</td><td><code>?add_to_wishlist=</code> AJAX params on /shop/page/2, theme <code>/assets/js/vendor/</code>, <code>wp-*.php</code>, <code>/wp-json/elementskit/v1/</code> — no real page</td><td><span class="pill done">Benign — monitor</span></td></tr>
+<tr><td class="kw">Blocked by other 4xx</td><td>3</td><td><code>/wp-admin/admin-ajax.php</code> variants</td><td><span class="pill done">Benign — no action</span></td></tr>
+<tr><td class="kw">Server error (5xx)</td><td>2</td><td><code>/shop/feed/</code> RSS + a <code>?add_to_wishlist</code> category URL (both stale, last crawled May)</td><td><span class="pill done">Benign — feed block covers it</span></td></tr>
+<tr><td class="kw">Blocked by robots.txt</td><td>0</td><td>&mdash;</td><td><span class="pill done">OK</span></td></tr>
+</tbody>
+</table>
+<h3 class="blk">Do first — one-time technical cleanup (clears ~half the report)</h3>
+<ul class="tick">
+<li><b>Disable/redirect RSS feeds</b> (site has 0 blog posts, so no feed is needed) — removes the bulk of the 139 "crawled&ndash;not-indexed" <i>and</i> the <code>/shop/feed/</code> 5xx. <span class="pill tech t">TECH</span></li>
+<li><b>robots.txt:</b> add <code>Disallow: /wp-content/plugins/</code> (Rank Math &rarr; General Settings &rarr; Edit robots.txt) — stops plugin-dir URLs being crawled. <span class="pill tech t">TECH</span></li>
+</ul>
+<div class="note"><b>How this maps to the daily routine:</b> the one-time cleanup above is a "this week" job; the ~15&ndash;20 real thin pages are worked off <b>2 per day</b> in the daily list below (enrich unique Dubai copy &rarr; URL Inspect &rarr; Request Indexing), then <b>Validate Fix</b> weekly. Everything marked <i>Benign</i> needs no action — don't chase it.</div>
+</div>
+<div class="card">
+<h2>Daily routine <button class="reset" id="resetDaily2" style="float:right">Reset for today</button></h2>
+<p class="sub">Small compounding actions &mdash; tick each day. Resets itself automatically at midnight; <span id="dailyDateLabel"></span></p>
+<div id="dailyList"></div>
+</div>
+<div class="card">
+<h2>Weekly routine (every Monday)</h2>
+<div id="weeklyList"></div>
+</div>
+</div>
+<div class="panel" id="content">
+<div class="card">
+<h2>📣 GBP Content Calendar &mdash; Google Posts &amp; Q&amp;A</h2>
+<p class="sub">Ready-to-paste copy for the Google Business Profile. Live status (28 Aug 2026): description live, category now <strong>Flag store</strong>, 10 services added, all 15 reviews replied, Posts already running, and YouTube / Facebook / Instagram linked. Post <strong>3&times; a week</strong> (competitors post every 1&ndash;2 days), keyword in the first line, <strong>one photo per post</strong>, and a button each time. Posts fade from view after ~7 days, so keep a steady stream.</p>
+</div>
+
+<div class="card">
+<h2>Google Posts &mdash; 30-day set (12 posts)</h2>
+<p class="sub">Suggested cadence: Monday &middot; Wednesday &middot; Friday. Do not paste identical text twice.</p>
+<table>
+<thead><tr><th>Slot</th><th>Type</th><th>Keyword</th><th>Post copy</th><th>Button</th></tr></thead>
+<tbody>
+<tr><td class="kw">W1&middot;Mon</td><td><span class="pill seo">What's new</span></td><td class="kw">flag printing dubai</td><td>Need flags fast in Dubai? Prime Smart Flags prints custom feather flags, teardrop flags, and pole flags in full colour, ready quickly even on tight deadlines. Message us on WhatsApp for a same-day quote.</td><td>Call</td></tr>
+<tr><td class="kw">W1&middot;Wed</td><td><span class="pill aeo">Product</span></td><td class="kw">telescopic flag pole dubai</td><td>Telescopic flag poles now available. Lightweight, adjustable, and easy to set up for events, shopfronts, and outdoor branding in Dubai. Ask us for sizes and pricing.</td><td>Call</td></tr>
+<tr><td class="kw">W1&middot;Fri</td><td><span class="pill geo">Use case</span></td><td class="kw">conference / table flags</td><td>Planning an exhibition or conference in Dubai? We print table flags, sail flags, and branded banners and deliver across the UAE. Send us your logo and we will handle the rest.</td><td>WhatsApp</td></tr>
+<tr><td class="kw">W2&middot;Mon</td><td><span class="pill aeo">Product</span></td><td class="kw">teardrop flags dubai</td><td>Teardrop flags that get your brand noticed. Printed on both sides on durable outdoor material, perfect for shopfronts, events, and roadside promotion across Dubai. Ask for a quote today.</td><td>Call</td></tr>
+<tr><td class="kw">W2&middot;Wed</td><td><span class="pill p2">Social proof</span></td><td class="kw">fast flag printing dubai</td><td>Rated 4.6 stars by Dubai teams for fast, reliable flag printing. Have a deadline this week? Call +971 55 268 1786 or message us on WhatsApp and we will get your flags done on time.</td><td>Call</td></tr>
+<tr><td class="kw">W2&middot;Fri</td><td><span class="pill aeo">Product</span></td><td class="kw">car flags uae</td><td>Have a national day or a campaign coming up? We print car flags, hand flags, and country flags for events across the UAE. Order early and we will deliver on time.</td><td>WhatsApp</td></tr>
+<tr><td class="kw">W3&middot;Mon</td><td><span class="pill aeo">Product</span></td><td class="kw">sail / feather flags dubai</td><td>Feather and sail flags for outdoor advertising in Dubai. Tall, eye-catching, and built to last outdoors. Choose your size, send your artwork, and we will print and deliver.</td><td>Call</td></tr>
+<tr><td class="kw">W3&middot;Wed</td><td><span class="pill seo">Service</span></td><td class="kw">same-day flag printing</td><td>Tight deadline? We are known for getting flags and banners printed fast in Dubai, often the same day. Tell us your deadline on WhatsApp and we will confirm what is possible.</td><td>WhatsApp</td></tr>
+<tr><td class="kw">W3&middot;Fri</td><td><span class="pill aeo">Product</span></td><td class="kw">l-shape / advertising flags</td><td>L-shape and advertising flags for stalls, events, and retail promotions in Dubai. Full-colour printing on durable material, delivered across the UAE.</td><td>Call</td></tr>
+<tr><td class="kw">W4&middot;Mon</td><td><span class="pill aeo">Product</span></td><td class="kw">roll-up banners dubai</td><td>Roll-up and pull-up banner stands printed and delivered fast in Dubai. Ideal for exhibitions, receptions, and events. Send your design and we will take care of the print.</td><td>WhatsApp</td></tr>
+<tr><td class="kw">W4&middot;Wed</td><td><span class="pill geo">Use case</span></td><td class="kw">custom flags dubai</td><td>Branding an office, event, or shopfront in Dubai? From table flags to telescopic poles, Prime Smart Flags covers the full range. Message us for advice on the right flag and finish.</td><td>WhatsApp</td></tr>
+<tr><td class="kw">W4&middot;Fri</td><td><span class="pill seo">Recap</span></td><td class="kw">custom flag printing dubai</td><td>Custom flag printing in Dubai, done right and on time. Feather, teardrop, sail, table, conference, and car flags, all in one place. Call +971 55 268 1786 for a quick quote.</td><td>Call</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h2>Evergreen fillers (use any time you miss a slot)</h2>
+<ul class="tick">
+<li><strong>Exhibition season:</strong> Getting ready for an exhibition in Dubai? Book your feather flags, banners, and telescopic poles early so everything is ready on the day. Message us to plan your stand.</li>
+<li><strong>Quality note:</strong> Every flag we print is full colour on durable outdoor material, made to hold up in Dubai sun and wind. Ask us which finish suits your use.</li>
+<li><strong>Quote reminder:</strong> Send your artwork, size, and quantity on WhatsApp at +971 55 268 1786 and we will reply with pricing the same day.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Q&amp;A to seed (7, SEO-optimized)</h2>
+<p class="sub">Google removed Q&amp;A from the dashboard and hides "Ask a question" for the owner on desktop. Seed from the <strong>Google Maps mobile app</strong>: search the business &rarr; Questions &amp; answers &rarr; Ask a question (paste Q) &rarr; then Answer (paste A). Ask from one account, answer from the owner account, and space them over a few days.</p>
+<table>
+<thead><tr><th>Question</th><th>Answer</th></tr></thead>
+<tbody>
+<tr><td class="kw">Do you print custom flags in Dubai?</td><td>Yes. We print custom advertising flags, feather flags, teardrop flags, table flags, and more, in full colour on durable outdoor material. Message us on WhatsApp for a quote.</td></tr>
+<tr><td class="kw">How fast can you deliver flags in Dubai?</td><td>Turnaround depends on the order, but we regularly handle tight deadlines and same-day requests. Contact us with your deadline and we will confirm.</td></tr>
+<tr><td class="kw">Where is Prime Smart Flags located?</td><td>We are in Al Khabaisi, Dubai. You can visit our workshop or order remotely and we will deliver across the UAE.</td></tr>
+<tr><td class="kw">Do you sell telescopic flag poles?</td><td>Yes. We supply adjustable telescopic flag poles and stands for indoor and outdoor use, with or without printed flags.</td></tr>
+<tr><td class="kw">Can you print both sides of a flag?</td><td>Yes, we offer single and double-sided printing depending on the flag type. Let us know your design and we will advise the best option.</td></tr>
+<tr><td class="kw">How do I get a quote for flag printing in Dubai?</td><td>Send your artwork, size, and quantity to us on WhatsApp at +971 55 268 1786 or email info@primesmart.ae and we will reply with pricing.</td></tr>
+<tr><td class="kw">Do you deliver flags across Dubai and the UAE?</td><td>Yes. We deliver flags and banners across Dubai and the wider UAE. Delivery time depends on your location and deadline.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<p style="text-align:center; color:#9aa1ab; font-size:11.5px; margin:14px 0 4px;">Prime Smart Flags &middot; 60-Day SEO/GEO/AEO plan (v2, stress-tested) &middot; Google Search Console, live UAE SERP, competitor research, 3-reviewer critique, live PageSpeed test + living checklist (17 Aug 2026)</p>
+</div>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    t.classList.add('active');
+    document.getElementById(t.dataset.tab).classList.add('active');
+  });
+});
+
+/* ===================== merged living checklist ===================== */
+(function(){
+  var LS=window.localStorage, PFX='psrank_';
+  function get(k,d){try{var v=LS.getItem(PFX+k);return v===null?d:JSON.parse(v);}catch(e){return d;}}
+  function set(k,v){try{LS.setItem(PFX+k,JSON.stringify(v));}catch(e){}}
+  if(!document.getElementById('phases'))return;
+
+  /* force completed items ticked so finished work ALWAYS shows done, regardless of saved state (17 Aug 2026) */
+  ['p0_0','p0_1','p0_2','p0_3','p0_4','p0_5','p0_6','p1_1','p1_2','p1_4','p1_5','p1_7','p2_4','p3_2','p6_0','p6_2','p6_6','p6_9','p8_0','p8_2','p1_3','p4_0'].forEach(function(k){ set('chk_'+k,true); });
+
+  var phases=[
+   {id:'p0',title:'Phase 0 — Access & technical diagnosis ✅ COMPLETE (17 Aug 2026)',desc:'Diagnosis done via live WP REST API. See Week0-Findings.md + Keyword-URL-Map-and-Redirects.md. Remaining: GSC access + backup before Week 1.',items:[
+    ['✅ WordPress admin connected (app password). ⏳ Still need: Search Console, GBP, hosting-backup confirm','tech'],
+    ['✅ Template overlap vs dlxprint — DISPROVEN (dlxprint is static Bootstrap, not WP/miniture; no shared theme/content)','tech'],
+    ['✅ Classified 140 not-indexed (GSC-VERIFIED): mostly RSS /feed/ URLs + /wp-content/plugins/ dirs + a few thin /product/ pages — NOT thin categories. Fix: disable/noindex feeds, block plugin dirs in robots.txt, enrich thin products','tech'],
+    ['✅ Facet audit: ?orderby/filter already canonical→/shop/ (GSC shows 100 "alternative page w/ canonical", benign); attribute archives low-impact','tech'],
+    ['✅ Keyword→URL map built: enrich categories in place, 7 dupes 301→money parents, ~15 thin cats noindex, 1 new pillar Page','seo'],
+    ['✅ robots.txt allows GPTBot / Google-Extended / ClaudeBot / Perplexity','geo'],
+    ['✅ Day-1 baseline logged from GSC (3-mo): 33 clicks · 2,120 impressions · 1.6% CTR · avg position 30.6','tech']]},
+   {id:'p1',title:'Phase 1 — Credibility & tracking (Week 1)',desc:'Google won’t rank a site leaking errors. Fix first.',items:[
+    ['Replace novaworks.net OG image sitewide with branded 1200×630','tech'],
+    ['Delete placeholder text (contact "two little houses", blog "Power of Brand", newsletter line)','tech'],
+    ['AED 0.00 — theme already shows "Request a quote" natively for the 20 zero-priced products (no price edit needed); real prices left to client','tech'],
+    ['Fix "Flags" nav # link → /flag-printing-dubai/','seo'],
+    ['Point homepage category tiles to real category URLs (not /shop)','seo'],
+    ['Fix UTF-8 mojibake in product copy/meta','tech'],
+    ['Verify GSC + GA4 + Bing Webmaster; submit sitemap','tech'],
+    ['Claim/verify GBP — resolve FZ-LLC vs Dubai-mainland address first','geo']]},
+   {id:'p2',title:'Phase 2 — Speed (template-level fixes)',desc:'Homepage 99, but /shop/ 74 (LCP 8.5s) & product 74 (TBT 1,090ms).',items:[
+    ['Fix /shop/ LCP 8.5s: size + fetchpriority=high on first grid image, right-sized WebP','tech'],
+    ['Lazy-load below-the-fold grid images; defer 660ms render-blocking CSS/JS','tech'],
+    ['Remove 235 KiB unused JS (archive) + 326 KiB unused CSS (product template)','tech'],
+    ['Enable Elementor "Improved CSS/Asset Loading"','tech'],
+    ['✅ Add caching — LiteSpeed Cache was installed but switched off; re-activated via REST (2 Sep), verified live (X-LiteSpeed-Cache: hit). No CDN layer added yet.','tech'],
+    ['Delay non-critical JS (wishlist, cart fragments, sliders) until interaction','tech'],
+    ['Add explicit width & height to all images (CLS)','tech'],
+    ['Re-test /shop/ + a product page in PSI — target LCP < 2.5s, score 90+','tech']]},
+   {id:'p3',title:'Phase 3 — On-page foundation (Week 2)',desc:'Tell Google what you sell and where.',items:[
+    ['Rewrite every title tag with keyword + "Dubai/UAE"','seo'],
+    ['Rewrite every meta description (unique, 150–160 chars)','seo'],
+    ['Add descriptive, keyworded alt text to all images','seo'],
+    ['Fix 5× 404 and 2× 5xx errors; thicken or noindex thin pages','tech'],
+    ['Add LocalBusiness + Organization schema sitewide (real NAP)','geo']]},
+   {id:'p4',title:'Phase 4 — Money landing pages (Weeks 3–4)',desc:'One Dubai page per money keyword. Pillar first.',items:[
+    ['Publish /flag-printing-dubai/ pillar & make it the Flags hub','seo'],
+    ['Publish /telescopic-flag-pole-dubai/ (pole vs printing + price)','seo'],
+    ['Publish /table-flags-dubai/','seo'],
+    ['Publish /sail-flag-printing-dubai/','seo'],
+    ['Publish /conference-flags-dubai/ (proven winner)','seo'],
+    ['Publish /l-shape-flags-dubai/','seo'],
+    ['(P2) /advertising-flags-dubai/, /teardrop-flags-dubai/, /car-flags-dubai/','seo'],
+    ['Each page: keyword in URL/H1/title/first-100-words/alt + ≥1 FAQ','aeo'],
+    ['Add Product + FAQPage schema; validate in Rich Results Test','aeo'],
+    ['Internal-link pillar ⇄ every spoke; request indexing for each','seo']]},
+   {id:'p5',title:'Phase 5 — AEO content (Weeks 4–7)',desc:'Win People Also Ask + AI answers.',items:[
+    ['Add FAQ blocks (20+ questions total) answering live PAA','aeo'],
+    ['Blog: "How much does flag printing cost in Dubai?"','aeo'],
+    ['Blog: "Sail flag vs teardrop flag — which for Dubai events?"','aeo'],
+    ['Blog: "Best flag material for the UAE climate (heat & sand)"','aeo'],
+    ['Blog: "What size flag do I need? — Dubai guide"','aeo'],
+    ['Add comparison + glossary content ("what is a sail flag")','aeo'],
+    ['Add Organization schema sameAs + brand entity signals','geo']]},
+   {id:'p6',title:'Phase 6 — GEO / local & reviews (ongoing)',desc:'Fastest visible page-1 = the Map Pack.',items:[
+    ['GBP: primary "Flag store" + secondary Sign shop / Digital printer','geo'],
+    ['GBP: upload 20+ real flag photos; add products with prices','geo'],
+    ['GBP: post weekly','geo'],
+    ['Use ONE primary phone across GBP + site + all citations','geo'],
+    ['Build 15–20 UAE citations (Yellow Pages UAE, Dubai Chamber, HiDubai, Connect.ae…)','geo'],
+    ['Reviews: ask EVERY customer via WhatsApp (no gating, no incentives)','geo'],
+    ['Reviews milestone: reach 10','geo'],
+    ['Reviews milestone: reach 20','geo'],
+    ['Reviews milestone: reach 30','geo'],
+    ['Reply to every review within 24–48h','geo'],
+    ['Enable true Product AggregateRating once real reviews exist','aeo']]},
+   {id:'p7',title:'Phase 7 — Backlinks (ongoing background)',desc:'Relevance > volume. No PBNs/link farms.',items:[
+    ['Phase 1: local citations live (also feed the Map Pack)','seo'],
+    ['Phase 2: B2B/supplier, event-vendor & partner links','seo'],
+    ['Phase 3: content/PR links + a case-study page','seo'],
+    ['Track new links monthly in Search Console → Links','seo']]},
+   {id:'p8',title:'Phase 8 — Trust & conversion',desc:'B2B Dubai buyers buy on trust + speed.',items:[
+    ['✅ About page live — published /about-us/ (27 Aug) with real story/hero content, verified via REST','seo'],
+    ['Add client logos + portfolio/gallery of real printed flags — not found on the site yet','seo'],
+    ['✅ Turnaround + delivery promise — "Fast Turnaround" section live on /about-us/ (27 Aug)','seo']]},
+   {id:'p9',title:'Phase 9 — Measure & optimise (weekly → Day 60)',desc:'Double down on what moves.',items:[
+    ['Every Monday: pull GSC, log money-keyword positions here','tech'],
+    ['Push page-2 keywords (pos 11–20): content, internal links, FAQ','seo'],
+    ['Improve CTR on high-impression, low-CTR pages (rewrite title/meta)','seo'],
+    ['Re-request indexing after each update','tech'],
+    ['Final schema validation pass (Product/FAQ/LocalBusiness)','aeo'],
+    ['Produce 60-day report vs Day-1 baseline','tech']]}
+  ];
+  var metrics=[
+   {k:'pos',label:'Avg. position',base:30.6,target:15,lower:true},
+   {k:'idx',label:'Indexed pages (quality)',base:37,target:90,lower:false},
+   {k:'rev',label:'Google reviews',base:0,target:30,lower:false},
+   {k:'clk',label:'Clicks (28d)',base:11,target:60,lower:false},
+   {k:'imp',label:'Impressions (28d)',base:700,target:2200,lower:false},
+   {k:'t20',label:'Money terms in top 20',base:1,target:5,lower:false},
+   {k:'t10',label:'Money terms in top 10',base:0,target:3,lower:false}];
+  var keywords=[
+   ['telescopic flag pole dubai','/telescopic-flag-pole-dubai/'],
+   ['table flags dubai','/table-flags-dubai/'],
+   ['conference flags dubai','/conference-flags-dubai/'],
+   ['l shape flags dubai','/l-shape-flags-dubai/'],
+   ['sail flags dubai','/sail-flag-printing-dubai/'],
+   ['advertising flags dubai','/advertising-flags-dubai/'],
+   ['teardrop flags dubai','/teardrop-flags-dubai/'],
+   ['custom flag printing dubai','/flag-printing-dubai/'],
+   ['car flags dubai','/car-flags-dubai/'],
+   ['flag printing dubai (head)','/flag-printing-dubai/']];
+  var daily=['Message recent-delivery customers for a Google review (WhatsApp)','Reply to any new reviews','GSC indexing: enrich 2 thin pages (from "Crawled – not indexed") with unique Dubai copy, then URL Inspect → Request Indexing','Check GSC for money-keyword movement + scan for any NEW real 404/5xx (ignore /feed/, ?add_to_wishlist & /wp-content/ URLs — those are benign)','Do one GBP action (photo, post, or product update)','Advance content: write/publish part of a page or post'];
+  var weekly=['Pull GSC 28-day data; update the metrics table above','Log each money keyword position in the rank tracker','GSC Page Indexing: hit "Validate Fix" on categories you addressed + re-check the 264 not-indexed trend','Pick the closest page-2 keyword and strengthen it','Re-test /shop/ + a product page in PageSpeed if speed work shipped','Add 2–3 new citations or one link'];
+  var tagName={seo:'SEO',geo:'GEO',aeo:'AEO',tech:'TECH'};
+
+  var totalItems=0, phasesEl=document.getElementById('phases');
+  phases.forEach(function(ph){
+    var card=document.createElement('div'); card.className='card';
+    var h='<h2>'+ph.title+' <span class="cnt" id="cnt_'+ph.id+'"></span></h2><p class="sub">'+ph.desc+'</p><div class="pbar"><i id="bar_'+ph.id+'"></i></div>';
+    var b=''; ph.items.forEach(function(it,i){ var key=ph.id+'_'+i; totalItems++; var c=get('chk_'+key,false);
+      b+='<label class="chk'+(c?' done':'')+'"><input type="checkbox" '+(c?'checked':'')+' data-key="'+key+'"><span class="txt">'+it[0]+' <span class="pill '+it[1]+'">'+tagName[it[1]]+'</span></span></label>'; });
+    card.innerHTML=h+b; phasesEl.appendChild(card);
+  });
+  document.getElementById('totalCount').textContent=totalItems;
+
+  function recalc(){ var done=0;
+    phases.forEach(function(ph){ var d=0; ph.items.forEach(function(_,i){ if(get('chk_'+ph.id+'_'+i,false))d++; }); done+=d;
+      var pct=ph.items.length?Math.round(d/ph.items.length*100):0;
+      var bar=document.getElementById('bar_'+ph.id); if(bar)bar.style.width=pct+'%';
+      var cn=document.getElementById('cnt_'+ph.id); if(cn)cn.textContent=d+'/'+ph.items.length; });
+    var pct=totalItems?Math.round(done/totalItems*100):0;
+    document.getElementById('doneCount').textContent=done;
+    document.getElementById('ringpct').textContent=pct+'%';
+    document.getElementById('overallBar').style.width=pct+'%';
+  }
+  phasesEl.addEventListener('change',function(e){ var cb=e.target; if(cb.type!=='checkbox')return;
+    set('chk_'+cb.getAttribute('data-key'),cb.checked); cb.closest('.chk').classList.toggle('done',cb.checked); stamp(); recalc(); });
+
+  var mrows=document.getElementById('metricRows');
+  metrics.forEach(function(m){ var cur=get('m_'+m.k,''); var tr=document.createElement('tr');
+    tr.innerHTML='<td class="kw">'+m.label+'</td><td>'+m.base+'</td><td><input class="num" data-mk="'+m.k+'" value="'+(cur===''?'':cur)+'" placeholder="—"></td><td>'+m.target+'</td><td><div class="mprog"><i id="mp_'+m.k+'"></i></div><span class="stat" id="ms_'+m.k+'"></span></td>';
+    mrows.appendChild(tr); });
+  function metricCalc(){ metrics.forEach(function(m){ var cur=get('m_'+m.k,''); var bar=document.getElementById('mp_'+m.k),st=document.getElementById('ms_'+m.k);
+    if(cur===''||isNaN(parseFloat(cur))){ if(bar)bar.style.width='0'; if(st)st.textContent=''; return; } cur=parseFloat(cur);
+    var pct=m.lower?(m.base-cur)/(m.base-m.target)*100:(cur-m.base)/(m.target-m.base)*100; pct=Math.max(0,Math.min(100,Math.round(pct)));
+    if(bar)bar.style.width=pct+'%'; if(st)st.textContent=pct>=100?'target hit ✓':pct+'% there'; }); }
+  mrows.addEventListener('input',function(e){ if(!e.target.classList.contains('num'))return; set('m_'+e.target.getAttribute('data-mk'),e.target.value.trim());
+    document.getElementById('metricSaved').textContent='Saved · '+new Date().toLocaleString(); metricCalc(); });
+
+  var rrows=document.getElementById('rankRows');
+  keywords.forEach(function(kw,i){ var cur=get('r_'+i,''); var tr=document.createElement('tr');
+    tr.innerHTML='<td class="kw">'+kw[0]+'</td><td class="clsmall">'+kw[1]+'</td><td><input class="num" data-rk="'+i+'" value="'+(cur===''?'':cur)+'" placeholder="—"></td><td><span class="badge b-none" id="rb_'+i+'">not logged</span></td><td class="clsmall">Top 3</td>';
+    rrows.appendChild(tr); });
+  function rankBadge(i){ var cur=get('r_'+i,''); var el=document.getElementById('rb_'+i); if(!el)return;
+    if(cur===''||isNaN(parseFloat(cur))){ el.className='badge b-none'; el.textContent='not logged'; return; } var p=parseFloat(cur);
+    if(p<=3){el.className='badge b-top3';el.textContent='Top 3 ✓';} else if(p<=10){el.className='badge b-p1';el.textContent='Page 1';}
+    else if(p<=20){el.className='badge b-p2';el.textContent='Page 2 — push';} else {el.className='badge b-p3';el.textContent='Page 3+';} }
+  rrows.addEventListener('input',function(e){ if(!e.target.classList.contains('num'))return; set('r_'+e.target.getAttribute('data-rk'),e.target.value.trim());
+    document.getElementById('rankSaved').textContent='Saved · '+new Date().toLocaleString(); rankBadge(e.target.getAttribute('data-rk')); });
+
+  function renderRoutine(el,arr,pre){ el.innerHTML=''; arr.forEach(function(t,i){ var c=get(pre+i,false); var lab=document.createElement('label'); lab.className='chk'+(c?' done':'');
+    lab.innerHTML='<input type="checkbox" '+(c?'checked':'')+' data-rt="'+pre+i+'"><span class="txt">'+t+'</span>'; el.appendChild(lab); }); }
+  function bindRoutine(el){ el.addEventListener('change',function(e){ if(e.target.type!=='checkbox')return; set(e.target.getAttribute('data-rt'),e.target.checked); e.target.closest('.chk').classList.toggle('done',e.target.checked); stamp(); }); }
+
+  /* ---- daily routine: per-day storage so each day keeps its own completion ---- */
+  function todayKey(){ var d=new Date(); var m=String(d.getMonth()+1).padStart(2,'0'); var day=String(d.getDate()).padStart(2,'0'); return d.getFullYear()+'-'+m+'-'+day; }
+  function todayLabel(){ var d=new Date(); return d.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+  var currentDay=todayKey();
+  var dailyList=document.getElementById('dailyList');
+  var dailyDateLabel=document.getElementById('dailyDateLabel');
+  function dailyPrefix(){ return 'd_'+currentDay+'_'; }
+  function renderDaily(){
+    if(dailyDateLabel) dailyDateLabel.textContent='showing '+todayLabel();
+    renderRoutine(dailyList,daily,dailyPrefix());
+  }
+  function resetDaily(){
+    daily.forEach(function(_,i){ set(dailyPrefix()+i,false); });
+    document.querySelectorAll('#dailyList input').forEach(function(cb){ cb.checked=false; cb.closest('.chk').classList.remove('done'); });
+    stamp();
+  }
+  renderDaily();
+  bindRoutine(dailyList);
+  document.getElementById('resetDaily').addEventListener('click',resetDaily);
+  document.getElementById('resetDaily2').addEventListener('click',resetDaily);
+
+  /* Roll the daily list to the new day automatically at local midnight (and whenever the tab regains focus after a day change). */
+  function rolloverIfNewDay(){ var t=todayKey(); if(t!==currentDay){ currentDay=t; renderDaily(); } }
+  function scheduleMidnight(){ var now=new Date(); var next=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,5); setTimeout(function(){ rolloverIfNewDay(); scheduleMidnight(); }, next-now); }
+  scheduleMidnight();
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) rolloverIfNewDay(); });
+  window.addEventListener('focus',rolloverIfNewDay);
+
+  /* ---- weekly routine: unchanged (single global set) ---- */
+  renderRoutine(document.getElementById('weeklyList'),weekly,'w_');
+  bindRoutine(document.getElementById('weeklyList'));
+
+  function stamp(){ var d=new Date().toLocaleString(); set('lastSaved',d); document.getElementById('lastSaved').textContent='Last updated '+d; }
+  var ls=get('lastSaved',null); if(ls)document.getElementById('lastSaved').textContent='Last updated '+ls;
+
+  /* ---- automatic verification from the live website ---- */
+  var SITE='https://primesmart.ae';
+  var URLS={home:SITE+'/',contact:SITE+'/contact-us/',adv:SITE+'/product/advertising-flags/',lshape:SITE+'/product/l-shape-flags/',about:SITE+'/about-us/',
+    lp0:SITE+'/flag-printing-dubai/',lp1:SITE+'/telescopic-flag-pole-dubai/',lp2:SITE+'/table-flags-dubai/',lp3:SITE+'/sail-flag-printing-dubai/',lp4:SITE+'/conference-flags-dubai/',lp5:SITE+'/l-shape-flags-dubai/',lp6:SITE+'/advertising-flags-dubai/',lp7:SITE+'/teardrop-flags-dubai/',lp8:SITE+'/car-flags-dubai/'};
+  function loaded(x){return x&&x.length>400;}
+  function exists(x){return loaded(x)&&!/nothing found|can.?t find|not found|error 404/i.test(x);}
+  var AUTOMAP={
+    'p1_0':{u:['home'],t:function(T){return loaded(T.home)&&!/novaworks/i.test(T.home);}},
+    'p1_1':{u:['contact'],t:function(T){return loaded(T.contact)&&!/two little houses/i.test(T.contact);}},
+    'p1_2':{u:['adv'],t:function(T){return loaded(T.adv)&&/request a quote/i.test(T.adv);}},
+    'p1_3':{u:['home'],t:function(T){return loaded(T.home)&&/flag-printing-dubai/i.test(T.home);}},
+    'p1_5':{u:['lshape'],t:function(T){return loaded(T.lshape)&&!/â€/.test(T.lshape);}},
+    'p3_0':{u:['home'],t:function(T){return loaded(T.home)&&/title:[^\n]*dubai/i.test(T.home);}},
+    'p4_0':{u:['lp0'],t:function(T){return exists(T.lp0);}},
+    'p4_1':{u:['lp1'],t:function(T){return exists(T.lp1);}},
+    'p4_2':{u:['lp2'],t:function(T){return exists(T.lp2);}},
+    'p4_3':{u:['lp3'],t:function(T){return exists(T.lp3);}},
+    'p4_4':{u:['lp4'],t:function(T){return exists(T.lp4);}},
+    'p4_5':{u:['lp5'],t:function(T){return exists(T.lp5);}},
+    'p4_6':{u:['lp6','lp7','lp8'],t:function(T){return exists(T.lp6)&&exists(T.lp7)&&exists(T.lp8);}},
+    'p8_0':{u:['about'],t:function(T){return exists(T.about);}}
+  };
+  Object.keys(AUTOMAP).forEach(function(key){ var cb=phasesEl.querySelector('input[data-key="'+key+'"]'); if(!cb)return; cb.disabled=true;
+    var lab=cb.closest('.chk'); lab.classList.add('auto'); var tx=lab.querySelector('.txt'); var b=document.createElement('span'); b.className='pill autopill'; b.textContent='AUTO'; b.style.marginLeft='6px'; tx.appendChild(b); });
+  function aStatus(m){ var el=document.getElementById('autoStatus'); if(el)el.textContent=m; }
+  async function fetchText(url){ try{ var r=await window.cowork.callMcpTool('mcp__workspace__web_fetch',{url:url});
+    if(!r||r.isError)return null;
+    if(r.structuredContent&&typeof r.structuredContent==='object')return JSON.stringify(r.structuredContent);
+    if(r.content&&r.content[0]&&r.content[0].text)return r.content[0].text; return null; }catch(e){ return null; } }
+  var autoBusy=false;
+  async function autoCheck(){
+    if(autoBusy)return;
+    if(!(window.cowork&&window.cowork.callMcpTool)){ aStatus('Auto-check needs the Cowork app connection — tick these manually for now.'); return; }
+    autoBusy=true; aStatus('Checking the live site…');
+    var need={}; Object.keys(AUTOMAP).forEach(function(k){ AUTOMAP[k].u.forEach(function(u){ need[u]=1; }); });
+    var keys=Object.keys(need); var T={}; var failed=0;
+    for(var i=0;i<keys.length;i++){ var t=await fetchText(URLS[keys[i]]); if(t===null){failed++;t='';} T[keys[i]]=t; }
+    if(failed===keys.length){ autoBusy=false; aStatus('Could not reach the site right now — try again in a moment.'); return; }
+    Object.keys(AUTOMAP).forEach(function(key){ var ok=false; try{ ok=!!AUTOMAP[key].t(T); }catch(e){ ok=false; }
+      set('chk_'+key,ok); var cb=phasesEl.querySelector('input[data-key="'+key+'"]'); if(cb){ cb.checked=ok; cb.closest('.chk').classList.toggle('done',ok); } });
+    recalc(); var doneN=Object.keys(AUTOMAP).filter(function(k){return get('chk_'+k,false);}).length;
+    aStatus('Auto-checked '+new Date().toLocaleTimeString()+' — '+doneN+'/'+Object.keys(AUTOMAP).length+' site tasks detected done'+(failed?' ('+failed+' pages unreachable)':''));
+    set('lastSaved',new Date().toLocaleString()); autoBusy=false;
+  }
+  var acb=document.getElementById('autoCheckBtn'); if(acb)acb.addEventListener('click',autoCheck);
+
+  recalc(); metricCalc(); keywords.forEach(function(_,i){ rankBadge(i); });
+  autoCheck();
+})();
+</script>
+</body>
+</html>
+</body></html>

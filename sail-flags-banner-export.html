@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap">
+<style>
+  :root{
+    --maroon-900: #3E0B18;
+    --maroon-700: #591023;
+    --gold-500: #C99A2E;
+    --gold-200: #E9C468;
+    --cream: #FBF6F3;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{ width:1200px; height:628px; overflow:hidden; }
+  body{ font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif; }
+
+  .frame{
+    width:1200px; height:628px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(155deg,var(--maroon-700) 0%,var(--maroon-900) 100%);
+    color:#fff;
+  }
+  .frame *{ box-sizing:border-box; }
+
+  .content{
+    position:absolute; inset:0;
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    align-items:center;
+  }
+
+  .text-col{ padding:0 0 0 6.5%; }
+
+  .logo{ display:flex; align-items:center; gap:.7em; margin-bottom:9%; }
+  .logo-mark{
+    width:32px; height:32px; background:var(--gold-500); transform:rotate(45deg);
+    display:flex; align-items:center; justify-content:center; border-radius:7px;
+  }
+  .logo-mark span{ transform:rotate(-45deg); color:var(--maroon-900); font-weight:800; font-size:10px; }
+  .logo-name{ font-weight:600; font-size:14px; letter-spacing:.03em; color:rgba(255,255,255,.85); }
+
+  .kicker{
+    font-size:12.5px; font-weight:600; letter-spacing:.24em; color:var(--gold-500);
+    text-transform:uppercase; margin-bottom:14px;
+  }
+
+  h1{
+    margin:0 0 16px;
+    font-size:64px; font-weight:800; line-height:.98; color:#fff;
+  }
+  h1 em{ font-style:italic; font-weight:700; color:var(--gold-200); }
+
+  .tagline{
+    font-size:16.5px; line-height:1.6; color:rgba(255,255,255,.72);
+    max-width:30em; margin-bottom:9%;
+  }
+
+  .cta{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--gold-500); color:var(--maroon-900); font-weight:700; font-size:14px;
+    padding:.95em 1.6em; border-radius:999px; width:fit-content;
+  }
+
+  .url{
+    margin-top:16px; font-size:12.5px; font-weight:500; color:rgba(255,255,255,.5); letter-spacing:.03em;
+  }
+
+  .flag-col{ position:relative; height:100%; display:flex; align-items:flex-end; justify-content:center; }
+  .flag-col svg{ width:78%; height:88%; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="content">
+    <div class="text-col">
+      <div class="logo">
+        <div class="logo-mark"><span>PSF</span></div>
+        <div class="logo-name">Prime Smart Flags</div>
+      </div>
+
+      <div class="kicker">Dubai, UAE</div>
+      <h1>Sail<br><em>Flags</em></h1>
+      <p class="tagline">Full colour print on weather-resistant fabric. Stays upright and catches the eye, even on a calm day.</p>
+
+      <div class="cta">WhatsApp us for a quote &#8250;</div>
+      <div class="url">www.primesmart.ae</div>
+    </div>
+
+    <div class="flag-col">
+      <svg viewBox="0 0 260 480" xmlns="http://www.w3.org/2000/svg">
+        <rect x="122" y="40" width="5" height="410" fill="rgba(255,255,255,.35)" rx="2.5"/>
+        <rect x="104" y="446" width="42" height="18" rx="5" fill="rgba(0,0,0,.28)"/>
+        <path d="M 127,42 C 200,54 234,120 216,205 C 202,270 168,325 127,368 Z"
+              fill="var(--gold-500)"/>
+        <g transform="translate(147,95) rotate(45)">
+          <rect width="30" height="30" rx="6" fill="var(--maroon-900)"/>
+          <text x="15" y="20" font-size="9.5" font-weight="800" fill="var(--gold-200)" text-anchor="middle" transform="rotate(-45 15 15)" font-family="Poppins, sans-serif">PSF</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

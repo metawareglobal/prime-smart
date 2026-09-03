@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrimeSmart — Dubai Keyword Plan</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f6f7f9; color: #1a1d21; line-height: 1.5; padding: 24px; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+header { background: linear-gradient(135deg, #7a1f1f 0%, #b02a2a 100%); color: #fff; border-radius: 16px; padding: 28px 30px; margin-bottom: 20px; }
+header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+header p { opacity: .92; font-size: 14px; }
+.meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { background: rgba(255,255,255,.16); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tab { background: #fff; border: 1px solid #e2e5ea; border-radius: 10px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: #444; cursor: pointer; transition: all .15s; }
+.tab:hover { border-color: #b02a2a; color: #b02a2a; }
+.tab.active { background: #b02a2a; color: #fff; border-color: #b02a2a; }
+.panel { display: none; }
+.panel.active { display: block; }
+.card { background: #fff; border: 1px solid #e8eaee; border-radius: 14px; padding: 22px 24px; margin-bottom: 18px; }
+.card h2 { font-size: 17px; margin-bottom: 4px; color: #1a1d21; }
+.card .sub { color: #6b7280; font-size: 13px; margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 10px 10px; background: #faf6f6; color: #7a1f1f; font-weight: 700; border-bottom: 2px solid #eaddd7; font-size: 12px; text-transform: uppercase; letter-spacing: .3px; }
+td { padding: 10px 10px; border-bottom: 1px solid #f0f1f3; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fcfafa; }
+.kw { font-weight: 600; color: #1a1d21; }
+.pill { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.p1 { background: #fde8e8; color: #b02020; }
+.p2 { background: #fff3e0; color: #b26a00; }
+.p3 { background: #eef2ff; color: #4353b0; }
+.buy { background: #e7f6ec; color: #1a7f3c; }
+.info { background: #eaf1fb; color: #2a5fb0; }
+.local { background: #f3ecfb; color: #6b3fb0; }
+.diffL { color: #1a7f3c; font-weight: 600; }
+.diffM { color: #b26a00; font-weight: 600; }
+.diffH { color: #b02020; font-weight: 600; }
+.vol { font-weight: 700; color: #1a1d21; }
+.note { background: #fff8e6; border: 1px solid #f3e3b3; border-radius: 10px; padding: 12px 16px; font-size: 12.5px; color: #6b5a1e; margin-bottom: 16px; }
+.note b { color: #4a3d0e; }
+.gsc { background: #eaf1fb; border: 1px solid #cfe0f6; border-radius: 10px; padding: 12px 16px; font-size: 12.5px; color: #244a7a; margin-bottom: 16px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } body { padding: 12px; } }
+.qlist { list-style: none; }
+.qlist li { padding: 9px 0 9px 26px; position: relative; border-bottom: 1px solid #f0f1f3; font-size: 13.5px; }
+.qlist li:before { content: "Q"; position: absolute; left: 0; top: 8px; width: 18px; height: 18px; background: #b02a2a; color: #fff; border-radius: 50%; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.qlist li:last-child { border-bottom: none; }
+.qlist .tag { font-size: 11px; color: #6b7280; font-weight: 600; margin-left: 8px; }
+.sugg { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.sugg span { background: #f2f4f7; border: 1px solid #e4e7eb; border-radius: 8px; padding: 6px 11px; font-size: 12.5px; color: #333; }
+.sugg span.hot { background: #fde8e8; border-color: #f5c9c9; color: #b02020; font-weight: 600; }
+.legend { font-size: 12px; color: #6b7280; margin-top: 10px; display: flex; flex-wrap: wrap; gap: 14px; }
+.legend b { color: #444; }
+.src { font-size: 11.5px; color: #8a929c; margin-top: 8px; }
+h3.blk { font-size: 13px; color: #7a1f1f; margin: 4px 0 8px; text-transform: uppercase; letter-spacing: .4px; }
+.price { font-size: 12px; color: #555; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>PrimeSmart.ae &mdash; Dubai Keyword Plan</h1>
+<p>Money keywords, volume list, live "People Also Ask" &amp; real-time suggestions &mdash; built from your Search Console demand + live Google SERP data (UAE).</p>
+<div class="meta">
+<span class="chip">Market: Dubai / UAE</span>
+<span class="chip">Goal: Page 1 Google</span>
+<span class="chip">Data: GSC + live SERP (gl=ae)</span>
+<span class="chip">Aug 2026</span>
+</div>
+</header>
+
+<div class="tabs">
+<button class="tab active" data-tab="money">Money Keywords</button>
+<button class="tab" data-tab="volume">Volume List</button>
+<button class="tab" data-tab="paa">People Also Ask</button>
+<button class="tab" data-tab="live">Real-Time Suggestions</button>
+<button class="tab" data-tab="map">Page Mapping</button>
+<button class="tab" data-tab="rivals">Competitor Teardown</button>
+<button class="tab" data-tab="gbp">Map Pack (GBP)</button>
+<button class="tab" data-tab="hats">White/Grey/Black Hat</button>
+<button class="tab" data-tab="links">Backlinks</button>
+</div>
+
+<div class="note">
+<b>On the numbers:</b> Exact Keyword Planner volumes need an active Google Ads account for primesmart.ae &mdash; the account picker only had unrelated <i>cancelled</i> test accounts, so precise Planner figures weren't retrievable. Volumes below are <b>estimated monthly ranges (Dubai/UAE)</b> triangulated from your real GSC impressions, SERP depth and market patterns. Treat them as priority guidance, not exact counts. To lock in exact figures: create a Google Ads account (free) &rarr; Keyword Planner &rarr; set location = United Arab Emirates.
+</div>
+
+<div class="panel active" id="money">
+<div class="card">
+<h2>Tier 1 &mdash; Primary money keywords</h2>
+<p class="sub">High commercial intent, Dubai-focused. These put buyers on a "select options / order" page. Win these and you win revenue.</p>
+<table>
+<thead><tr><th>Keyword</th><th>Intent</th><th>Est. vol/mo</th><th>Difficulty</th><th>Priority</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="kw">flag printing dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">200&ndash;500</td><td class="diffH">High</td><td><span class="pill p1">P1</span></td><td>Core money head-term; homepage/hub target</td></tr>
+<tr><td class="kw">telescopic flag pole dubai / uae</td><td><span class="pill buy">Buy</span></td><td class="vol">150&ndash;400</td><td class="diffM">Medium</td><td><span class="pill p1">P1</span></td><td>~700 GSC impressions, 0 clicks &mdash; you already rank pg 2&ndash;3</td></tr>
+<tr><td class="kw">table flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">100&ndash;300</td><td class="diffM">Medium</td><td><span class="pill p1">P1</span></td><td>91 GSC impressions; strong shopping demand</td></tr>
+<tr><td class="kw">sail flags dubai / sail flag printing dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">90&ndash;250</td><td class="diffM">Med&ndash;High</td><td><span class="pill p1">P1</span></td><td>Flagship product; competitors AED 244&ndash;625</td></tr>
+<tr><td class="kw">advertising flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">90&ndash;250</td><td class="diffM">Med&ndash;High</td><td><span class="pill p1">P1</span></td><td>Broad category, high buyer intent</td></tr>
+<tr><td class="kw">custom flag printing dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">80&ndash;200</td><td class="diffH">High</td><td><span class="pill p2">P2</span></td><td>Reinforces hub; "custom" = high intent</td></tr>
+<tr><td class="kw">l shape flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">60&ndash;180</td><td class="diffM">Medium</td><td><span class="pill p2">P2</span></td><td>138 + 70 GSC impressions, 0 clicks &mdash; close win</td></tr>
+<tr><td class="kw">teardrop flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">70&ndash;200</td><td class="diffM">Medium</td><td><span class="pill p2">P2</span></td><td>Popular event flag</td></tr>
+<tr><td class="kw">flag suppliers in dubai / flag supplier uae</td><td><span class="pill buy">Buy</span></td><td class="vol">100&ndash;250</td><td class="diffM">Medium</td><td><span class="pill p2">P2</span></td><td>B2B/bulk intent; About + hub target</td></tr>
+<tr><td class="kw">conference flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">30&ndash;100</td><td class="diffL">Low&ndash;Med</td><td><span class="pill p1">P1</span></td><td>Your ONE proven winner (10 clicks) &mdash; protect &amp; expand</td></tr>
+<tr><td class="kw">feather flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">50&ndash;150</td><td class="diffM">Medium</td><td><span class="pill p3">P3</span></td><td>Synonym for sail/blade &mdash; capture the term</td></tr>
+<tr><td class="kw">car flags dubai</td><td><span class="pill buy">Buy</span></td><td class="vol">50&ndash;150</td><td class="diffM">Medium</td><td><span class="pill p3">P3</span></td><td>Seasonal spikes (National Day, sports)</td></tr>
+</tbody>
+</table>
+<div class="legend"><span><b>P1</b> do first (4&ndash;6 wks)</span><span><b>P2</b> next (6&ndash;10 wks)</span><span><b>P3</b> later</span><span><b>Difficulty</b> = SERP competitiveness in UAE</span></div>
+</div>
+
+<div class="card">
+<h2>Tier 2 &mdash; Long-tail money keywords (fastest wins)</h2>
+<p class="sub">Lower volume but near-purchase intent and much easier to rank. Where you get on page 1 <b>first</b> &mdash; build into product/landing pages and FAQs.</p>
+<div class="grid2">
+<div>
+<h3 class="blk">Price / cost intent</h3>
+<table><tbody>
+<tr><td class="kw">flag printing dubai price</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">flag printing dubai cost</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">sail flags dubai price</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">telescopic flag pole dubai price</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">cheap flag printing dubai</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">cheap table flags dubai</td><td><span class="pill buy">Buy</span></td></tr>
+</tbody></table>
+</div>
+<div>
+<h3 class="blk">Product / near-buy modifiers</h3>
+<table><tbody>
+<tr><td class="kw">royal table flags dubai</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">telescopic flag pole dubai for sale</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">online flag printing dubai</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">branded flags for events dubai</td><td><span class="pill buy">Buy</span></td></tr>
+<tr><td class="kw">flag making shop near me</td><td><span class="pill local">Local</span></td></tr>
+<tr><td class="kw">curve top flag dubai</td><td><span class="pill buy">Buy</span></td></tr>
+</tbody></table>
+</div>
+</div>
+<div class="src">Source: live Google "People also search for" (gl=ae) + your GSC query report.</div>
+</div>
+
+<div class="card">
+<h2>Competitor price &amp; proof benchmarks</h2>
+<p class="sub">What the page-1 players show &mdash; match or beat these on your money pages (put prices on-page; "AED 0.00" products are killing you).</p>
+<table>
+<thead><tr><th>Category</th><th>Market price range (live SERP)</th><th>Signals to beat</th></tr></thead>
+<tbody>
+<tr><td class="kw">Flag printing (entry)</td><td class="price">from AED 170 (MaxPrint)</td><td>MaxPrint, DLX 48-hr production</td></tr>
+<tr><td class="kw">Sail flags</td><td class="price">AED 244 &ndash; 625</td><td>Half Price 5.0(106), Printarabia 4.9(524)</td></tr>
+<tr><td class="kw">Table flags</td><td class="price">AED 22 &ndash; 400 (royal 144&ndash;400)</td><td>Heavy Shopping/Amazon presence</td></tr>
+<tr><td class="kw">Telescopic (printed)</td><td class="price">AED 300 &middot; poles AED 150&ndash;915</td><td>Mixed intent: pole hardware vs printed flag</td></tr>
+<tr><td class="kw">L-shape flags</td><td class="price">AED 260</td><td>DLX 4.7(1,266)</td></tr>
+</tbody>
+</table>
+<div class="gsc"><b>Local Map Pack rivals to beat (GBP):</b> MUU Creations Flags &amp; Poles 5.0 (33), Seher Flags 4.2 (62), Half Price Print 5.0 (106). You need a claimed, reviewed GBP to appear here &mdash; it sits above organic results.</div>
+</div>
+</div>
+
+<div class="panel" id="volume">
+<div class="card">
+<h2>Full keyword list by estimated volume</h2>
+<p class="sub">All targets sorted high &rarr; low. "GSC" column = real impressions already recorded for your site (last 90 days) &mdash; proof the demand is real.</p>
+<table>
+<thead><tr><th>#</th><th>Keyword</th><th>Est. vol/mo</th><th>Type</th><th>Difficulty</th><th>GSC impr. (90d)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="kw">flag printing dubai</td><td class="vol">200&ndash;500</td><td><span class="pill buy">Buy</span></td><td class="diffH">High</td><td>&mdash;</td></tr>
+<tr><td>2</td><td class="kw">telescopic flag pole uae</td><td class="vol">150&ndash;400</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>189</td></tr>
+<tr><td>3</td><td class="kw">telescopic flag pole dubai</td><td class="vol">120&ndash;300</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>168</td></tr>
+<tr><td>4</td><td class="kw">telescopic flag pole supplier in uae</td><td class="vol">100&ndash;250</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>164</td></tr>
+<tr><td>5</td><td class="kw">flag suppliers in dubai</td><td class="vol">100&ndash;250</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>6</td><td class="kw">table flags dubai / table flag</td><td class="vol">100&ndash;300</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>91</td></tr>
+<tr><td>7</td><td class="kw">l shaped flag / l shape flags</td><td class="vol">60&ndash;180</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>138 + 70</td></tr>
+<tr><td>8</td><td class="kw">advertising flags dubai</td><td class="vol">90&ndash;250</td><td><span class="pill buy">Buy</span></td><td class="diffM">Med&ndash;High</td><td>&mdash;</td></tr>
+<tr><td>9</td><td class="kw">sail flags dubai</td><td class="vol">90&ndash;250</td><td><span class="pill buy">Buy</span></td><td class="diffM">Med&ndash;High</td><td>&mdash;</td></tr>
+<tr><td>10</td><td class="kw">custom flag printing dubai</td><td class="vol">80&ndash;200</td><td><span class="pill buy">Buy</span></td><td class="diffH">High</td><td>&mdash;</td></tr>
+<tr><td>11</td><td class="kw">teardrop flags dubai</td><td class="vol">70&ndash;200</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>12</td><td class="kw">telescopic flags</td><td class="vol">60&ndash;150</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>68</td></tr>
+<tr><td>13</td><td class="kw">flag pole uae / flag pole dubai</td><td class="vol">80&ndash;200</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>14</td><td class="kw">feather flags dubai</td><td class="vol">50&ndash;150</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>15</td><td class="kw">car flags dubai</td><td class="vol">50&ndash;150</td><td><span class="pill buy">Buy</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>16</td><td class="kw">conference flag(s)</td><td class="vol">30&ndash;100</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low&ndash;Med</td><td>54</td></tr>
+<tr><td>17</td><td class="kw">uae flag printing / uae flag banner</td><td class="vol">100&ndash;400</td><td><span class="pill info">Mixed</span></td><td class="diffM">Medium</td><td>&mdash;</td></tr>
+<tr><td>18</td><td class="kw">hand flags dubai</td><td class="vol">40&ndash;120</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low&ndash;Med</td><td>&mdash;</td></tr>
+<tr><td>19</td><td class="kw">bunting flags dubai</td><td class="vol">30&ndash;100</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low</td><td>&mdash;</td></tr>
+<tr><td>20</td><td class="kw">dashboard flags / car desert flags</td><td class="vol">20&ndash;90</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low</td><td>14</td></tr>
+<tr><td>21</td><td class="kw">stadium / hoisting / outdoor flags dubai</td><td class="vol">20&ndash;80</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low</td><td>&mdash;</td></tr>
+<tr><td>22</td><td class="kw">blade flags dubai</td><td class="vol">20&ndash;70</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low</td><td>&mdash;</td></tr>
+<tr><td>23</td><td class="kw">fan scarf / body flags printing</td><td class="vol">10&ndash;50</td><td><span class="pill buy">Buy</span></td><td class="diffL">Low</td><td>&mdash;</td></tr>
+<tr><td>24</td><td class="kw">prime flags / prime smart flags (brand)</td><td class="vol">10&ndash;40</td><td><span class="pill info">Brand</span></td><td class="diffL">Low</td><td>21</td></tr>
+</tbody>
+</table>
+<div class="src">GSC impressions = real data from your Search Console (last 90 days). Volumes estimated (Dubai/UAE geo). Difficulty = UAE SERP competition observed 15 Aug 2026.</div>
+</div>
+</div>
+
+<div class="panel" id="paa">
+<div class="card">
+<h2>People Also Ask &mdash; pulled live from Google (UAE)</h2>
+<p class="sub">Actual PAA questions Google shows for your terms right now. Answer each in an FAQ block (with FAQ schema) or a blog post &mdash; this is how you win featured snippets and AI answers (AEO).</p>
+<h3 class="blk">Live from SERP (answer these verbatim)</h3>
+<ul class="qlist">
+<li>How much does a telescopic flag pole cost? <span class="tag">telescopic SERP &middot; high intent</span></li>
+<li>Are telescopic flag poles any good? <span class="tag">telescopic SERP</span></li>
+<li>What is a telescopic flag pole? <span class="tag">telescopic SERP &middot; definition</span></li>
+<li>What is the tallest flagpole in Dubai? <span class="tag">sail + telescopic SERP</span></li>
+<li>Which flag is UAE? <span class="tag">sail SERP</span></li>
+<li>How to display the UAE flag? <span class="tag">sail SERP</span></li>
+<li>What date is UAE flag day? <span class="tag">sail SERP &middot; seasonal</span></li>
+</ul>
+<h3 class="blk" style="margin-top:18px;">Commercial questions to create &amp; own (high ROI)</h3>
+<ul class="qlist">
+<li>How much does flag printing cost in Dubai? <span class="tag">price snippet &mdash; huge</span></li>
+<li>What is a sail flag and how does it work? <span class="tag">product</span></li>
+<li>Sail flag vs teardrop flag &mdash; which is better for events? <span class="tag">comparison</span></li>
+<li>What size table flag / desk flag should I choose? <span class="tag">spec</span></li>
+<li>What is the best flag material for the UAE climate (heat &amp; sand)? <span class="tag">expertise / GEO</span></li>
+<li>How long does flag printing take in Dubai? <span class="tag">turnaround</span></li>
+<li>Where can I buy custom flags in Dubai? <span class="tag">local</span></li>
+</ul>
+<div class="src">Source: live Google "People also ask" boxes (gl=ae) for "sail flags dubai" and "telescopic flag pole dubai", 15 Aug 2026, plus buyer-intent gaps.</div>
+</div>
+</div>
+
+<div class="panel" id="live">
+<div class="card">
+<h2>Real-time keyword suggestions (live "People also search for")</h2>
+<p class="sub">Straight from Google's SERP for the UAE right now. Red = high commercial value &mdash; build these into pages, product tags and internal links.</p>
+<h3 class="blk">From "flag printing dubai"</h3>
+<div class="sugg">
+<span class="hot">flag printing dubai price</span><span class="hot">flag printing dubai cost</span><span class="hot">custom flag printing dubai</span><span class="hot">online flag printing dubai</span><span class="hot">cheap flag printing dubai</span><span>free flag printing dubai</span><span>flag printing sharjah</span><span>flag printing abu dhabi</span>
+</div>
+<h3 class="blk" style="margin-top:16px;">From "sail flags dubai"</h3>
+<div class="sugg">
+<span class="hot">sail flags dubai price</span><span class="hot">flag suppliers in dubai</span><span class="hot">custom flag dubai</span><span class="hot">feather flags dubai</span><span class="hot">branded flags for events</span><span>flag banner dubai</span><span>flag supplier in uae</span><span>flag making shop near me</span>
+</div>
+<h3 class="blk" style="margin-top:16px;">From "table flags dubai"</h3>
+<div class="sugg">
+<span class="hot">cheap table flags dubai</span><span class="hot">table flag printing</span><span>wooden table flags dubai</span><span>table flag stand</span><span>table flag size cm</span><span>table flag mockup</span>
+</div>
+<h3 class="blk" style="margin-top:16px;">From "telescopic flag pole dubai"</h3>
+<div class="sugg">
+<span class="hot">telescopic flag pole dubai price</span><span class="hot">outdoor telescopic flag pole dubai</span><span class="hot">telescopic flag pole dubai for sale</span><span class="hot">flag pole suppliers in uae</span><span>flag pole uae</span><span>flag pole abu dhabi</span>
+</div>
+<div class="src">Source: live Google "People also search for" clusters (gl=ae), 15 Aug 2026. Re-check quarterly.</div>
+</div>
+</div>
+
+<div class="panel" id="map">
+<div class="card">
+<h2>Keyword &rarr; page mapping (build these)</h2>
+<p class="sub">Every money keyword needs ONE dedicated, Dubai-anchored landing page (600&ndash;1,200 words + FAQ + schema). Your product URLs have no "dubai"/"printing" &mdash; that's why you rank page 3.</p>
+<table>
+<thead><tr><th>New / target page</th><th>Primary keyword</th><th>Secondary / long-tail</th><th>Priority</th></tr></thead>
+<tbody>
+<tr><td class="kw">/flag-printing-dubai (hub / home)</td><td>flag printing dubai</td><td>custom flag printing dubai, flag suppliers in dubai, price</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">/telescopic-flag-pole-dubai</td><td>telescopic flag pole dubai/uae</td><td>flag pole suppliers uae, for sale, price, outdoor</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">/table-flags-dubai</td><td>table flags dubai</td><td>royal table flags, desk flags, cheap table flags, size</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">/sail-flag-printing-dubai</td><td>sail flags dubai</td><td>curve top flag, feather flags, sail flag price</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">/conference-flags-dubai</td><td>conference flags dubai</td><td>royal conference flags, VIP desk flags</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">/advertising-flags-dubai</td><td>advertising flags dubai</td><td>promotional flags, event flags uae</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">/l-shape-flags-dubai</td><td>l shape flags dubai</td><td>l shaped flag, marker flags</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">/teardrop-flags-dubai</td><td>teardrop flags dubai</td><td>tear drop flag printing uae</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">/car-flags-dubai</td><td>car flags dubai</td><td>desert flags, dashboard flags, national day</td><td><span class="pill p3">P3</span></td></tr>
+<tr><td class="kw">Blog posts (AEO/GEO)</td><td>PAA questions</td><td>price guide, material guide, sail vs teardrop, size guide</td><td><span class="pill p2">P2</span></td></tr>
+</tbody>
+</table>
+<div class="gsc"><b>Golden rule:</b> keyword in the URL, H1, title tag, first 100 words, image alt, and one FAQ. Add real prices. Add LocalBusiness + Product + FAQPage schema. Then request indexing.</div>
+</div>
+</div>
+
+<div class="panel" id="rivals">
+<div class="card">
+<h2>Who owns page 1 &mdash; and exactly how</h2>
+<p class="sub">Live analysis of the sites ranking top for your money keywords (Google UAE, 15 Aug 2026). Two players dominate: <b>Zahrat Al Madina (zamadina.com)</b> and <b>Deluxe Printing (dlxprint.com)</b>.</p>
+<table>
+<thead><tr><th>Competitor</th><th>Ranks for</th><th>Their winning play</th><th>Proof / trust</th></tr></thead>
+<tbody>
+<tr><td class="kw">Zahrat Al Madina<br><span class="price">zamadina.com</span></td><td>flag printing dubai, sail, table, telescopic, conference</td><td><b>Massive pillar page</b> (2,000+ words) + FAQ schema + exact-match URLs</td><td>GBP 4.8 (248), "since 2019", Umm Ramool facility</td></tr>
+<tr><td class="kw">Deluxe Printing<br><span class="price">dlxprint.com</span></td><td>sail, table, l-shape, telescopic (all as _dubai.html)</td><td><b>Exact-match keyword URLs</b> + review schema stars + turnaround USP</td><td>4.7 (1,266) in SERP, 48-hr / 24-hr rush</td></tr>
+<tr><td class="kw">Half Price Print<br><span class="price">halfpriceprint.ae</span></td><td>sail, table (royal), flags printing</td><td>Shopify store, real prices, fast delivery</td><td>GBP 5.0 (106)</td></tr>
+<tr><td class="kw">MaxPrint</td><td>flag printing (price terms)</td><td>"from AED 170" price-led titles, Shopify</td><td>Transparent pricing</td></tr>
+<tr><td class="kw">Chrysels / Joys / Exprintmart</td><td>flag printing dubai (page 1 tail)</td><td>Aged domains, broad print authority</td><td>Established brands</td></tr>
+<tr><td class="kw">Sahara / flagprintinguae.com</td><td>flag printing company dubai</td><td>"100% in-house", "largest" authority angle</td><td>Manufacturer positioning</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>The playbook they all use (and you don't)</h2>
+<p class="sub">Common tactics decoded from their live pages &mdash; this is your to-do list.</p>
+<table>
+<thead><tr><th>Tactic</th><th>What the leaders do</th><th>PrimeSmart today</th></tr></thead>
+<tbody>
+<tr><td class="kw">Exact-match URLs</td><td>/sail_flags_dubai, /table_flags_dubai, /flags-printing-dubai</td><td class="diffH">generic /product/ slugs, no "dubai"</td></tr>
+<tr><td class="kw">Pillar + spokes</td><td>One huge "Flag Printing Dubai" hub linking to every flag type</td><td class="diffH">no hub; category tiles link to /shop</td></tr>
+<tr><td class="kw">Long-form content</td><td>Zamadina: 2,000+ words, 5 category blocks, use-cases</td><td class="diffH">thin product pages (140 unindexed)</td></tr>
+<tr><td class="kw">FAQ + schema</td><td>Zamadina: 12+ FAQs w/ FAQPage schema</td><td class="diffH">zero FAQs</td></tr>
+<tr><td class="kw">Review stars</td><td>DLX shows 4.7 (1,266) via AggregateRating schema</td><td class="diffH">0 reviews on every product</td></tr>
+<tr><td class="kw">Turnaround USP</td><td>"48-hr production, same-day proofing, 24-hr rush"</td><td class="diffM">no turnaround/delivery promise</td></tr>
+<tr><td class="kw">Real prices on page</td><td>"from AED 285", "from AED 170"</td><td class="diffH">several products show AED 0.00</td></tr>
+<tr><td class="kw">Local E-E-A-T</td><td>"since 2019", named facility, govt/embassy clients</td><td class="diffM">address exists but placeholder text</td></tr>
+<tr><td class="kw">UAE-climate copy</td><td>UV-resistant, dye-sublimation, "UAE sun"</td><td class="diffM">partial, generic</td></tr>
+<tr><td class="kw">Named venues/events</td><td>GITEX, Cityscape, Sheikh Zayed Rd, National Day</td><td class="diffH">none</td></tr>
+<tr><td class="kw">WhatsApp quote</td><td>"Send logo on WhatsApp, quote in minutes"</td><td><span class="pill buy">you have this &mdash; keep it</span></td></tr>
+</tbody>
+</table>
+<div class="gsc"><b>Reverse-engineered winner (Zamadina):</b> keyword H1 &rarr; 5 category sections each linking to sub-pages &rarr; "Why Choose" E-E-A-T &rarr; "Where Flags Are Used" use-cases &rarr; materials &amp; bases education &rarr; 12-question FAQ with schema &rarr; cross-sell grid. <b>Copy this architecture.</b></div>
+</div>
+<div class="card">
+<h2>Where you can actually win</h2>
+<ul class="qlist">
+<li>DLX's product pages are <b>thin on text</b> &mdash; they rank on URL + authority + review stars. A richer page can outrank them on mid-tail terms. <span class="tag">content gap</span></li>
+<li>Most rivals have <b>weak blog/AEO content</b> &mdash; nobody owns the "how much does flag printing cost in Dubai" questions. <span class="tag">AEO opening</span></li>
+<li>The <b>telescopic flag pole</b> SERP is fragmented (hardware vs printed flag) &mdash; a clear page can capture ~700 impressions you already get. <span class="tag">quick win</span></li>
+<li>Your <b>WhatsApp order + artwork upload</b> flow already matches the leaders. <span class="tag">strength</span></li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="gbp">
+<div class="card">
+<h2>Google Business Profile &mdash; the Map Pack you're missing</h2>
+<p class="sub">Live from Google Maps for "flag printing dubai" (15 Aug 2026). The Map Pack sits <b>above</b> organic results &mdash; and PrimeSmart is not in it.</p>
+<div class="note" style="margin-bottom:14px;"><b>Reality:</b> PrimeSmart has <b>no visible Google Business Profile</b> ranking for flag terms. Every rival below captures local buyers first. This is your <b>fastest</b> route to "page 1".</div>
+<table>
+<thead><tr><th>Business</th><th>Rating (reviews)</th><th>Category</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td class="kw">Naqsh Media</td><td>5.0 (36)</td><td>Event management company</td><td><span class="pill p2">Sponsored ad</span></td></tr>
+<tr><td class="kw">Blue Leaf Advertising</td><td>5.0 (9)</td><td>Advertising agency</td><td><span class="pill p2">Sponsored ad</span></td></tr>
+<tr><td class="kw">Zahrat Al Madina Printing</td><td>4.8 (248)</td><td>Sign shop</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">AL FAJR Design &amp; Printing</td><td>4.8 (137)</td><td>Sign shop &middot; Naif Rd</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">P R I N T Advertising</td><td>4.9 (127)</td><td>Advertising agency</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">Half Price Print</td><td>5.0 (106)</td><td>Flag store</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">Adventure Sign &amp; Printing</td><td>4.9 (88)</td><td>Sign shop</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">Seher Flags &amp; Flagpoles</td><td>4.2 (62)</td><td>Flag store</td><td><span class="pill buy">Organic pack</span></td></tr>
+<tr><td class="kw">MUU Creations Flags &amp; Poles</td><td>5.0 (33)</td><td>Flag store</td><td><span class="pill buy">Organic pack</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>How to break into the Map Pack</h2>
+<table>
+<thead><tr><th>Signal</th><th>What winners have</th><th>Your action</th></tr></thead>
+<tbody>
+<tr><td class="kw">Claimed GBP</td><td>All ranked players verified</td><td>Claim/verify GBP for Al Khabaisi, Dubai (mind the FZ-LLC issue)</td></tr>
+<tr><td class="kw">Primary category</td><td>"Flag store" / "Sign shop"</td><td>Primary = Flag store; secondary = Sign shop, Digital printer</td></tr>
+<tr><td class="kw">Reviews</td><td>Leaders 88&ndash;248; entry ~30</td><td>Ask every customer via WhatsApp; target 30+</td></tr>
+<tr><td class="kw">NAP consistency</td><td>Identical everywhere</td><td>ONE phone number, exact address on site + GBP + directories</td></tr>
+<tr><td class="kw">Photos &amp; posts</td><td>Real product/work photos, regular posts</td><td>Upload 20+ real flag photos; post weekly</td></tr>
+<tr><td class="kw">Products/services</td><td>Flag types listed</td><td>Add all flag types as GBP products with prices</td></tr>
+</tbody>
+</table>
+<div class="gsc"><b>Note:</b> the top 2 slots are <b>paid Local ads</b> &mdash; a new GBP can appear there via Google Ads while you build reviews. Full organic pack entry is realistically 1&ndash;3+ months.</div>
+</div>
+</div>
+
+<div class="panel" id="hats">
+<div class="card">
+<h2>White / Grey / Black Hat audit of the leaders</h2>
+<p class="sub">Based on inspecting live page code (JSON-LD schema, HTML, SERP snippets) of zamadina.com &amp; dlxprint.com on 15 Aug 2026. Evidence-based &mdash; not assumptions.</p>
+<div class="note"><b>Bottom line:</b> the leaders are <b>mostly white-hat</b>. The one clear <b>grey-to-black-hat</b> tactic is <b>review-star manipulation</b> (Deluxe Printing). <b>Do NOT copy it</b> &mdash; it risks a Google manual action. You can beat them with white-hat alone.</div>
+</div>
+<div class="card">
+<h2>White Hat &mdash; legitimate, copy these</h2>
+<table>
+<thead><tr><th>Tactic</th><th>Who / evidence</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td class="kw">Comprehensive pillar content</td><td>Zamadina ~2,000+ words, 5 category blocks (confirmed live)</td><td class="diffL">White</td></tr>
+<tr><td class="kw">FAQ + FAQPage schema</td><td>DLX table page carries valid FAQPage (6 Q&amp;A) in JSON-LD (confirmed)</td><td class="diffL">White</td></tr>
+<tr><td class="kw">LocalBusiness / Product schema</td><td>DLX full LocalBusiness (address, geo, areaServed) + Product schema (confirmed)</td><td class="diffL">White</td></tr>
+<tr><td class="kw">Keyword-exact URLs w/ real content</td><td>/sail_flags_dubai.html, /flags-printing-dubai/</td><td class="diffL">White</td></tr>
+<tr><td class="kw">E-E-A-T signals</td><td>Zamadina "since 2019", named facility, govt/embassy clients</td><td class="diffL">White</td></tr>
+<tr><td class="kw">Real Google reviews</td><td>Zamadina 4.8 (248), AL FAJR 4.8 (137)</td><td class="diffL">White</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Grey Hat &mdash; borderline</h2>
+<table>
+<thead><tr><th>Tactic</th><th>Evidence</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td class="kw">Location-page templating</td><td>Near-identical /keyword_dubai pages, swapped keyword</td><td class="diffM">Grey &mdash; doorway risk if thin</td></tr>
+<tr><td class="kw">Keyword repetition / density</td><td>"Flag Printing Dubai" repeated heavily in H1/H2/body</td><td class="diffM">Grey &mdash; near over-optimization</td></tr>
+<tr><td class="kw">Self-serving LocalBusiness AggregateRating</td><td>DLX embeds AggregateRating on its own LocalBusiness node</td><td class="diffM">Grey &mdash; Google disallows self-serving snippets</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Grey&rarr;Black Hat &mdash; flagged, do NOT copy</h2>
+<div class="note" style="background:#fdecec;border-color:#f3c0c0;color:#8a2020;"><b>Notify:</b> the one tactic that could get a site penalized. It's why some rivals show star ratings you can't match &mdash; but it's a policy violation, not a moat.</div>
+<table>
+<thead><tr><th>Tactic</th><th>Evidence (live code + SERP)</th><th>Why it's a violation</th></tr></thead>
+<tbody>
+<tr><td class="kw">Review-star injection on every product</td><td><b>Deluxe Printing</b> shows identical <b>4.7 (1,266)</b> on <i>every</i> product SERP snippet, while each product's schema carries only a single embedded Review. The 1,266 is the business-level rating pushed onto individual products.</td><td class="diffH">Google requires ratings to reflect reviews of <b>that specific item</b>. Reusing one aggregate across all = misleading rich results &rarr; manual-action risk.</td></tr>
+</tbody>
+</table>
+<div class="gsc"><b>Fair note:</b> we found <b>no</b> hard evidence of cloaking, hidden text, or link schemes on the pages inspected &mdash; not alleging those. The review-schema issue is the only clearly documented violation.</div>
+</div>
+<div class="card">
+<h2>Your move: beat them clean</h2>
+<ul class="qlist">
+<li>Collect <b>real</b> Google + on-site product reviews &rarr; earn genuine Product AggregateRating stars. <span class="tag">white hat</span></li>
+<li>Build the Zamadina-style pillar + FAQ schema &mdash; same result, no risk. <span class="tag">white hat</span></li>
+<li>If a rival's ranking looks unfairly boosted by fake review snippets, report via Google's spam / structured-data problem form. <span class="tag">optional</span></li>
+</ul>
+</div>
+</div>
+
+<div class="panel" id="links">
+<div class="card">
+<h2>Backlink strategy (recon-based)</h2>
+<p class="sub">Exact referring-domain data needs a paid tool (Ahrefs / Semrush / Moz). This is a <b>strategy + target list</b> from how UAE flag/print competitors earn links.</p>
+<div class="note"><b>Where you stand:</b> with only 37 pages indexed and near-zero authority, your fastest wins are <b>local citations</b> (also boost the Map Pack) and <b>B2B directories</b>.</div>
+</div>
+<div class="card">
+<h2>Phase 1 &mdash; Local citations (do first, 2&ndash;3 weeks)</h2>
+<p class="sub">Free NAP listings. EXACT same Name / Address / Phone everywhere (Prime Smart Flags &middot; 1st Floor, 20th St, Al Khabaisi, Dubai &middot; +971 55 268 1786).</p>
+<table>
+<thead><tr><th>Platform</th><th>Why</th><th>Priority</th></tr></thead>
+<tbody>
+<tr><td class="kw">Google Business Profile</td><td>Map Pack + strongest local signal</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">Yellow Pages UAE (yellowpages.ae)</td><td>Top UAE directory, printing category</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">Dubai Chamber of Commerce directory</td><td>High-trust, credibility</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">Connect.ae / HiDubai</td><td>Popular Dubai local directories</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">Yelp UAE, Hotfrog UAE, Yello.ae</td><td>Citation consistency</td><td><span class="pill p2">P2</span></td></tr>
+<tr><td class="kw">Facebook, Instagram, LinkedIn pages</td><td>Social citations + fix dead footer links</td><td><span class="pill p1">P1</span></td></tr>
+<tr><td class="kw">Bing Places, Apple Business Connect</td><td>Secondary map coverage</td><td><span class="pill p3">P3</span></td></tr>
+</tbody>
+</table>
+<div class="src">Aim for 15&ndash;20 consistent citations.</div>
+</div>
+<div class="card">
+<h2>Phase 2 &mdash; Niche &amp; B2B links (weeks 3&ndash;8)</h2>
+<ul class="qlist">
+<li><b>UAE printing/advertising B2B marketplaces</b> &mdash; list as supplier. <span class="tag">supplier listing</span></li>
+<li><b>Event &amp; exhibition supplier directories</b> &mdash; GITEX/Cityscape vendor lists. <span class="tag">niche</span></li>
+<li><b>Partner/supplier link swaps</b> &mdash; event companies, signage installers, gift firms. <span class="tag">relationship</span></li>
+<li><b>Free zone / trade listings</b> &mdash; your FZ LLC authority's member directory. <span class="tag">trust</span></li>
+</ul>
+</div>
+<div class="card">
+<h2>Phase 3 &mdash; Content &amp; PR links (ongoing)</h2>
+<ul class="qlist">
+<li><b>Linkable blog assets</b> &mdash; cost guide, material guide, size guide. <span class="tag">white hat</span></li>
+<li><b>Local PR / guest posts</b> &mdash; Dubai business/SME blogs. <span class="tag">editorial</span></li>
+<li><b>Case studies</b> &mdash; "flags we produced for [event]". <span class="tag">natural</span></li>
+</ul>
+<div class="gsc"><b>Rules:</b> relevance &gt; volume. 20 clean UAE links beat 200 spammy ones. Avoid link farms, PBNs, comment spam. Track links monthly in Search Console.</div>
+</div>
+<div class="card">
+<h2>To get EXACT competitor backlinks</h2>
+<ul class="qlist">
+<li>Run zamadina.com / dlxprint.com through <b>Ahrefs / Semrush / Moz</b> (free tiers show top links). <span class="tag">tool needed</span></li>
+<li>Export referring domains &rarr; filter UAE directories/blogs &rarr; replicate the gettable ones. <span class="tag">link-gap</span></li>
+</ul>
+</div>
+</div>
+
+<p style="text-align:center; color:#9aa1ab; font-size:11.5px; margin:14px 0 4px;">Prime Smart Flags &middot; Dubai keyword + competitor strategy &middot; Google Search Console + live UAE SERP, competitor page code, Google Maps &amp; directory recon (15 Aug 2026)</p>
+</div>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    t.classList.add('active');
+    document.getElementById(t.dataset.tab).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
